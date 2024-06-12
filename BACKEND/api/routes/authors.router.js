@@ -4,7 +4,7 @@ const {
   getAllAuthors,
   getOneAuthor,
  
-} = require('../controllers/Authors.controller')
+} = require('../controllers/authors.controller')
 
 
 router.get('/',  getAllAuthors)

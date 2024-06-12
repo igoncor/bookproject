@@ -1,5 +1,5 @@
-const { Sequelize } = require("sequelize");
 require("dotenv").config();
+const { Sequelize } = require("sequelize");
 
 // en este archivo se crea la instancia de la conexión de la base de datos con sequalizecon
 const connection = new Sequelize(
@@ -27,7 +27,7 @@ const checkDB = async () => {
 //model sincronization
 const syncModels = async () => {
   try {
-    await connection.sync()
+    await connection.sync('alter')
     console.log('Models syncrhonized!')
   } catch (error) {
     console.error("Unable to sync models:")

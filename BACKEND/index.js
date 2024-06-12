@@ -1,5 +1,6 @@
 require("dotenv").config() // Requerimos dotenv en el archivo principal para poder emplear variables de entorno en todo el proyecto (process.env)
 const express = require('express')
+const cors = require('cors')
 const morgan = require('morgan')
 
 const { checkDB, syncModels } = require("./database")
@@ -8,9 +9,25 @@ const defineRelations = require('./database/relations')
 const startDB = async () => {  
   await checkDB()          // 1. Comprobar conexión
   // await defineRelations()  // 2. Importar modelos y definir sus relaciones
-  syncModels()             // 3. Sincronizar modelos con la base de datos
+  await syncModels()             // 3. Sincronizar modelos con la base de datos
 }
-startDB();
+
+const initAndListen = () => {
+  const app = express()
+  .use(cors())
+  .use(morgan('dev'))
+  .use(express.json())
+  .listen(3000, () => {
+    console.log("Listening on port 3000")
+  })
+}
+
+const startAPI = async () => {
+  await startDB()
+  initAndListen()
+}
+
+startAPI()
 
 // const router = require("./api/routes") // Instancia del router principal, alojado en /api/routes/index.js
  
