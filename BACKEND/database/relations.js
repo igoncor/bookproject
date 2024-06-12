@@ -8,4 +8,4 @@ const Book = require('../api/models/book.model')
 
 
 
-module.exports = defineRelations
+// module.exports = defineRelations

@@ -1,5 +1,7 @@
 const User = requiere ('../model/user.model')
 
+const bcrypt = require('bcrypt')
+
 async function getAllUsers(req, res) {
 	try {
 		const users = await User.findAll()
