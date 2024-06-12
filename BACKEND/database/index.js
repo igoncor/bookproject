@@ -1,5 +1,5 @@
 const { Sequelize } = require("sequelize");
-// require("dotenv").config();
+require("dotenv").config();
 
 // en este archivo se crea la instancia de la conexión de la base de datos con sequalizecon
 const connection = new Sequelize(

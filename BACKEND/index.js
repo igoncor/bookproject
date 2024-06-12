@@ -5,11 +5,12 @@ const morgan = require('morgan')
 const { checkDB, syncModels } = require("./database")
 const defineRelations = require('./database/relations')
 
-const startDB = async () => {
+const startDB = async () => {  
   await checkDB()          // 1. Comprobar conexión
-  await defineRelations()  // 2. Importar modelos y definir sus relaciones
+  // await defineRelations()  // 2. Importar modelos y definir sus relaciones
   syncModels()             // 3. Sincronizar modelos con la base de datos
 }
+startDB();
 
 // const router = require("./api/routes") // Instancia del router principal, alojado en /api/routes/index.js
  
