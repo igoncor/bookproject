@@ -3,7 +3,7 @@ const { connection } = require('../../database')
  // Instancia de la conexión generado en el archivo index.js de la carpeta database
 
  const User = connection.define (
-    "user",
+    "user",{ 
     name: {
         type: DataTypes.STRING,
         alowNull: false,
@@ -34,10 +34,10 @@ const { connection } = require('../../database')
     }
 
 
- {
+  }, {
     timestamps: false
      // Indicamos que no queremos generar las columnas de 'fecha de creación' ni de 'fecha de última actualización'
   }
-)
+);
 
 module.exports = User

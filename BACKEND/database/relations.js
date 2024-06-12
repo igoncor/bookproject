@@ -24,4 +24,4 @@ const defineRelations = () => {
 
 
 
-module.exports = defineRelations
+// module.exports = defineRelations

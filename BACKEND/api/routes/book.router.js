@@ -2,8 +2,7 @@ const router = require("express").Router()
 
 const {
   getAllBooks,
-  getOneBook,
-  getOwnProfile,
+  getOneBook, 
   createBook,
   updateOneBook,
   deleteOneBook
