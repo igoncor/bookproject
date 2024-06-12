@@ -8,13 +8,16 @@ const Favorites = connection.define(
             type: DataTypes.INTEGER,
             allowNull: false,
             unique: true
-        }
+        },
         book_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             unique: true
         }
+    },
+    {
+      timestamps: false
     }
-    )
+  )
 
 module.exports = Favorites
