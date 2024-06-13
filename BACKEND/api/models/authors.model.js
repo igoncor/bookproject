@@ -20,14 +20,14 @@ const Author = connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    death: 
+    death: {
         type: DataTypes.INTEGER,
-        allowNUll: false,
+        allowNull: false,
     },
-    
+}, 
     {
     timestamps: false
     }
 )
 
-module.exports = Author;
+module.exports = Author

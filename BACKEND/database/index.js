@@ -1,7 +1,6 @@
-const { Sequelize } = require("sequelize");
 require("dotenv").config();
+const { Sequelize } = require("sequelize");
 
-<<<<<<< HEAD
 // en este archivo se crea la instancia de la conexión de la base de datos con sequalizecon
 const connection = new Sequelize(
     process.env.DB_NAME, 
@@ -12,21 +11,12 @@ const connection = new Sequelize(
       dialect: process.env.DB_DIALECT,
     }
   );
-=======
-//instancia de la conexión de la base de datos con sequalize
-const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS {
-    host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT,
-  }
-);
-
->>>>>>> 0843cd62789333d67ccf1e96876b8da415ca4254
 
 //testing de la conexión
 const checkDB = async () => {
   try {
     await connection.authenticate()
-    console.log('Connection has been established successfully.');
+    console.log('Connection has been established successfully, listening on Port:3000.');
   } catch (error) {
     console.error('Unable to connect to the database:')
     console.error(error)
@@ -37,7 +27,7 @@ const checkDB = async () => {
 //model sincronization
 const syncModels = async () => {
   try {
-    await connection.sync()
+    await connection.sync('alter')
     console.log('Models syncrhonized!')
   } catch (error) {
     console.error("Unable to sync models:")

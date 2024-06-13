@@ -2,11 +2,11 @@ const router = require('express').Router() // Creo una instancia de router de ex
 
 const userRouter = require ('./user.router')
 const bookRouter = require ('./book.router')
-
+const authorsRouter = require ('./authors.router')
 
 router.use('/user', userRouter)
 router.use('/book', bookRouter)
-
+router.use('/authors', authorsRouter)
 
 
 
