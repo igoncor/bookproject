@@ -20,23 +20,11 @@ const Book = connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-<<<<<<< HEAD
     likes: {
         type: DataTypes.INTEGER,
         allowNUll: false,
     },
 },  
-=======
-    likes: 
-        type: DataTypes.INTEGER,
-        allowNUll: false,
-    },
-    imagen: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    
->>>>>>> 0843cd62789333d67ccf1e96876b8da415ca4254
     {
     timestamps: false
     }
