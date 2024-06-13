@@ -8,6 +8,7 @@ async function getAllUsers(req, res) {
 		if (users) {
 			return res.status(200).json(users)
 		} else {
+			console.log("Borrame")
 			return res.status(404).send('No users found')
 		}
 	} catch (error) {
