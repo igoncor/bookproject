@@ -7,12 +7,10 @@ const Reviews = connection.define(
         user_id: { 
             type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true
         },
         book_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true
         },
         review: {
             type: DataTypes.TEXT,
