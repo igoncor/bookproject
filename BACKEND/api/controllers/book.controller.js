@@ -1,11 +1,8 @@
 const Book = require ('../models/book.model')
 
-
 const getAllBooks = async (req, res) => {
   try {
-    const books = await Books.findAll({
-      where: req.query
-    })
+    const books = await Book.findAll()
 
     if (!books) {
       res.status(404).json({
@@ -16,7 +13,7 @@ const getAllBooks = async (req, res) => {
 
     res.status(200).json({
       message: "All Books fetched",
-      result: users,
+      result: books,
     })
   } catch (error) {
     console.log(error);
@@ -27,36 +24,39 @@ const getAllBooks = async (req, res) => {
   }
 }
 
-const getOneBook = async (req, res) => {
-  try {
-    const book = await Book.findByPk(req.params.id, {
-      include: {
-        model: ContactInfo
-      }
-    })
 
-    if (!book) {
-      res.status(404).json({
-        message: "No book found",
-        result: user,
-      });
-    }
 
-    res.status(200).json({
-      message: "Book fetched",
-      result: book,
-    });
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({
-      message: "Error getting one book",
-      result: error,
-    });
-  }
-};
+
+// const getOneBook = async (req, res) => {
+//   try {
+//     const book = await Book.findByPk(req.params.id, {
+//       include: {
+//         model: ContactInfo
+//       }
+//     })
+
+//     if (!book) {
+//       res.status(404).json({
+//         message: "No book found",
+//         result: user,
+//       });
+//     }
+
+//     res.status(200).json({
+//       message: "Book fetched",
+//       result: book,
+//     });
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).json({
+//       message: "Error getting one book",
+//       result: error,
+//     });
+//   }
+// };
 
 
 module.exports = {
   getAllBooks,
-  getOneBook, 
+   
 }
