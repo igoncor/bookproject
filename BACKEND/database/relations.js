@@ -14,7 +14,7 @@ const defineRelations = () => {
     //RELACIONES ONE TO MANY
 
 //un autor puede tener muchos libros y cada registro en Book pertenece a un único autor en la tabla Author
-    Author.hasMany(Book, { foreignKey: 'author_id' });
+    Author.hasMany(Book);
     Book.belongsTo(Author);
 
 
