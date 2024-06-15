@@ -8,8 +8,8 @@ const defineRelations = require('./database/relations')
 
 const startDB = async () => {  
   await checkDB()          // 1. Comprobar conexión
-  // await defineRelations()  // 2. Importar modelos y definir sus relaciones
-  await syncModels()             // 3. Sincronizar modelos con la base de datos
+  await defineRelations()  // 2. Importar modelos y definir sus relaciones
+  syncModels()       // 3. Sincronizar modelos con la base de datos (no ponemos el await porque es lo último, no hay nada debajo)
 }
 
 const initAndListen = () => {
