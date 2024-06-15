@@ -2,6 +2,7 @@
 const Author = require('../api/models/authors.model')
 const Book = require('../api/models/book.model')
 const User = require('../api/models/user.model')
+const ContactInfo = require('../api/models/contact.model')
 const Favorites = require('../api/models/favorites.model')
 const Reviews = require('../api/models/review.model')
 const CategoryBook = require('../api/models/categories_book.model'); 
