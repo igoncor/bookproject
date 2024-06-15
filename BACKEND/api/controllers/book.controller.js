@@ -24,21 +24,20 @@ const getAllBooks = async (req, res) => {
   }
 }
 
-
-
+  
 
 // const getOneBook = async (req, res) => {
 //   try {
 //     const book = await Book.findByPk(req.params.id, {
 //       include: {
-//         model: ContactInfo
+//         model: book
 //       }
 //     })
 
 //     if (!book) {
 //       res.status(404).json({
 //         message: "No book found",
-//         result: user,
+//         result:book,
 //       });
 //     }
 
@@ -55,8 +54,36 @@ const getAllBooks = async (req, res) => {
 //   }
 // };
 
+async function getOneBook(req, res) {
+	try {
+		const book = await Book.findByPk(req.params.id)
+		if (book) {
+			return res.status(200).json(book)
+		} else {
+			return res.status(404).send('Book not found')
+		}
+	} catch (error) {
+		res.status(500).send(error.message)
+	}
+}
+
+async function createBook(req, res) {
+    try {
+        const book = await Book.create(req.body)
+        return res.status(200).json({ message: 'Book created', book: book })
+    } catch (error) {
+        res.status(500).send(error.message)
+    }
+}
+
+
 
 module.exports = {
   getAllBooks,
-   
+  getOneBook, 
+  createBook,
 }
+
+
+
+  

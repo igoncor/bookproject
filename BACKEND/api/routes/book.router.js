@@ -15,8 +15,8 @@ const {
 
 // router.get('/', checkAuth, checkAdmin, getAllBooks)
 router.get('/',  getAllBooks)
-// router.get('/:id', getOneBook)
-// router.post('/', createBook)
+router.get('/:id', getOneBook)
+router.post('/', createBook)
 // router.put('/:id', updateOneBook)
 // router.delete('/:id', deleteOneBook)
 
