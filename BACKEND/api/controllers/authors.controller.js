@@ -1,9 +1,9 @@
-const Authors = require('../models/authors.model');
+const Author = require('../models/authors.model');
 //const Book = require ('../models/book.model')
 
 const getAllAuthors = async (req, res) => {
     try {
-      const authors = await Authors.findAll({
+      const authors = await Author.findAll({
         where: req.query
       })
   
@@ -30,7 +30,7 @@ const getAllAuthors = async (req, res) => {
 
   async function getOneAuthor(req, res) {
     try {
-        const author = await Authors.findByPk(req.params.id)
+        const author = await Author.findByPk(req.params.id)
         if (author) {
             return res.status(200).json(author)
         } else {
@@ -43,7 +43,7 @@ const getAllAuthors = async (req, res) => {
 
 async function createAuthor(req, res) {
 	try {
-		const author = await Authors.create({
+		const author = await Author.create({
 			name: req.body.name,
 			surname: req.body.surname,
 			country: req.body.country,
@@ -58,7 +58,7 @@ async function createAuthor(req, res) {
 
 async function updateAuthor(req, res) {
 	try {
-		const [authorExist, author] = await Authors.update(req.body, {
+		const [authorExist, author] = await Author.update(req.body, {
 			returning: true,
 			where: {
 				id: req.params.id,
@@ -76,7 +76,7 @@ async function updateAuthor(req, res) {
 
 async function deleteAuthor(req, res) {
 	try {
-		const rowsDeleted = await Authors.destroy({
+		const rowsDeleted = await Author.destroy({
 			where: {
 				id: req.params.id,
 			},
