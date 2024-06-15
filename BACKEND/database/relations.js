@@ -9,48 +9,45 @@ const UserBook = require('../api/models/user_books.model');
 const BookWanted = require('../api/models/books_wanted.model');
 
 const defineRelations = () => {
-    //ONE TO ONE: un autor puede tener muchos libros
+   
+    //RELACIONES ONE TO MANY
+
+//un autor puede tener muchos libros y cada registro en Book pertenece a un único autor en la tabla Author
     Author.hasMany(Book, { foreignKey: 'author_id' });
     Book.belongsTo(Author, { foreignKey: 'author_id' });
 
 
-    //ONE TO MANY 
-    //1. un user puede tener muchas review
-    User.hasMany(Review, { foreignKey: 'user_id' });
-    Review.belongsTo(User, { foreignKey: 'user_id' });
+//un usuario puede tener muchas reviews y cada registro en la tabla review pertenece a un único usuario
+    User.hasMany(Reviews, { foreignKey: 'user_id' });
+    Reviews.belongsTo(User, { foreignKey: 'user_id' });
 
-    //2. Tabla categoría de libros
-    CategoryBook.hasMany(Book, { foreignKey: 'category_id' });
-    Book.belongsTo(CategoryBook, { foreignKey: 'category_id' });
+//Una categoría puede tener muchos libros
+    CategoryBook.hasMany(Book, { foreignKey: 'category_id' }); //varios libros pueden pertenecer a la misma categoria
+    Book.belongsTo(CategoryBook, { foreignKey: 'category_id' }); // cada libro pertenece a una categoría especifica
 
-    //MANY TO MANY
-    //1. Favorites (relación de muchos a muchos entre users)
-    User.hasMany(Favorite, { foreignKey: 'user_id' });
-    Favorite.belongsTo(User, { foreignKey: 'user_id' });
+    //RELACIONES MANY TO MANY
 
-    Book.hasMany(Favorite, { foreignKey: 'book_id' });
-    Favorite.belongsTo(Book, { foreignKey: 'book_id' });
+//un usuario puede tener muchos libros favoritos y un libro puede ser el favorito de muchos usuarios. Relación many to many usando Favorites como intermedia que almacena info sobre qué usuarios tienen libros como favoritos
+    User.hasMany(Favorites, { foreignKey: 'user_id' }); //un usuario puede tener muchos libros favoritos
+    Favorites.belongsTo(User, { foreignKey: 'user_id' }); //cada registro en favoritos pertenece a un usuario
 
-    //2. libros leídos por users (tabla user_books)
-    User.hasMany(UserBook, { foreignKey: 'user_id' });
-    UserBook.belongsTo(User, { foreignKey: 'user_id' });
+    Book.hasMany(Favorites, { foreignKey: 'book_id' }); // muchos usuarios pueden tener el mismo libro como favrorito
+    Favorites.belongsTo(Book, { foreignKey: 'book_id' }); //cada regstro en favoritos pertenece a un libro especifico
 
-    Book.hasMany(UserBook, { foreignKey: 'book_id' });
-    UserBook.belongsTo(Book, { foreignKey: 'book_id' });
+//libros leídos por cada usuario. Es una relacion many to many usando laa tabla intermedia UserBook, que almacena la info sobre qué usuarios han leído qué libros
+    User.hasMany(UserBook, { foreignKey: 'user_id' }); //un usuario puede tener muchos ligros registrados
+    UserBook.belongsTo(User, { foreignKey: 'user_id' }); //cada registro en UserBook pertenece a un usuario concreto
 
-    //3. libros wanted (tabla books_wanted)
-    User.hasMany(BookWanted, { foreignKey: 'user_id' });
-    BookWanted.belongsTo(User, { foreignKey: 'user_id' });
+    Book.hasMany(UserBook, { foreignKey: 'book_id' }); //muchos usuarios pueden haber leído el mismo libro
+    UserBook.belongsTo(Book, { foreignKey: 'book_id' }); //cada registro en UserBook pertenece a un libro concreto
 
-    Book.hasMany(BookWanted, { foreignKey: 'book_id' });
-    BookWanted.belongsTo(Book, { foreignKey: 'book_id' });
+//libros deseados por cada usuario. Es una combinación de dos relaciones one to many, que juntas crean una many to many usando una tabla intermedia BookWanted
+    User.hasMany(BookWanted, { foreignKey: 'user_id' }); //un usuario puede querer muchos libros
+    BookWanted.belongsTo(User, { foreignKey: 'user_id' }); //cada registro en BookWanted pertenece a un usuario concreto
 
-
-
+    Book.hasMany(BookWanted, { foreignKey: 'book_id' }); //muchos usuarios pueden querer el mismo libro
+    BookWanted.belongsTo(Book, { foreignKey: 'book_id' }); //cada registro en BookWanted pertenece a un libro concreto
 }
-
-
-
 
 
 
