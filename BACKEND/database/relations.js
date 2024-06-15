@@ -19,8 +19,8 @@ const defineRelations = () => {
 
 
 //un usuario puede tener muchas reviews y cada registro en la tabla review pertenece a un único usuario
-    User.hasMany(Reviews);
-    Reviews.belongsTo(User);
+    User.hasMany(Review);
+    Review.belongsTo(User);
 
 //Una categoría puede tener muchos libros
     CategoryBook.hasMany(Book); //varios libros pueden pertenecer a la misma categoria
@@ -29,11 +29,11 @@ const defineRelations = () => {
     //RELACIONES MANY TO MANY
 
 //un usuario puede tener muchos libros favoritos y un libro puede ser el favorito de muchos usuarios. Relación many to many usando Favorites como intermedia que almacena info sobre qué usuarios tienen libros como favoritos
-    User.hasMany(Favorites); //un usuario puede tener muchos libros favoritos
-    Favorites.belongsTo(User); //cada registro en favoritos pertenece a un usuario
+    User.hasMany(Favorite); //un usuario puede tener muchos libros favoritos
+    Favorite.belongsTo(User); //cada registro en favoritos pertenece a un usuario
 
-    Book.hasMany(Favorites); // muchos usuarios pueden tener el mismo libro como favrorito
-    Favorites.belongsTo(Book); //cada regstro en favoritos pertenece a un libro especifico
+    Book.hasMany(Favorite); // muchos usuarios pueden tener el mismo libro como favrorito
+    Favorite.belongsTo(Book); //cada regstro en favoritos pertenece a un libro especifico
 
 //libros leídos por cada usuario. Es una relacion many to many usando laa tabla intermedia UserBook, que almacena la info sobre qué usuarios han leído qué libros
     User.hasMany(UserBook); //un usuario puede tener muchos ligros registrados

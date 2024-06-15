@@ -3,10 +3,10 @@ const Favorite = require('../models/favorite.model');
 
 const getAllFavorites = async (req, res) => {
     try {
-      const favorites = await Favorite.findAll({
+      const favorite = await Favorite.findAll({
         where: req.query
       })
-      if (!favorites) {
+      if (!favorite) {
         res.status(404).json({
           message: 'No favorites found',
           result: favorites
@@ -14,7 +14,7 @@ const getAllFavorites = async (req, res) => {
       }
       res.status(200).json({
         message: "All favorites fetched",
-        result: favorites,
+        result: favorite,
       })
     } catch (error) {
       console.log(error);
@@ -56,7 +56,7 @@ async function createFavorite(req, res) {
 
 async function updateFavorite(req, res) {
 	try {
-		const [favoriteExist, favorite] = await Favorites.update(req.body, {
+		const [favoriteExist, favorite] = await Favorite.update(req.body, {
 			returning: true,
 			where: {
 				id: req.params.id,
