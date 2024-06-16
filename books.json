@@ -1,0 +1,225 @@
+[
+    {
+      "id": 1,
+      "title": "Tomates verdes fritos",
+      "author_id": 27,
+      "resumen": "Un drama de amistad y amor en un pueblo del sur de Estados Unidos durante los años de la Gran Depresión.",
+      "category": ["Drama", "Romance"],
+      "imagen": ""
+    },
+    {
+      "id": 2,
+      "title": "El arte de la cocina francesa",
+      "author_id": 28,
+      "resumen": "Una guía completa sobre la cocina francesa con técnicas detalladas y recetas clásicas.",
+      "category": ["Cocina"],
+      "imagen": ""
+    },
+    {
+      "id": 3,
+      "title": "La biblia de los pasteles",
+      "author_id": 29,
+      "resumen": "Un libro esencial para los amantes de la repostería, con recetas de pasteles, tartas y postres.",
+      "category": ["Cocina"],
+      "imagen": ""
+    },
+    {
+      "id": 4,
+      "title": "Cocina mexicana paso a paso",
+      "author_id": 30,
+      "resumen": "Recetas auténticas de la cocina mexicana con instrucciones detalladas y fotografías ilustrativas.",
+      "category": ["Cocina"],
+      "imagen": ""
+    },
+    {
+      "id": 5,
+      "title": "Cien años de soledad",
+      "author_id": 1,
+      "resumen": "Una saga familiar que explora la historia de los Buendía en el pueblo ficticio de Macondo.",
+      "category": ["Drama", "Histórica"],
+      "imagen": ""
+    },
+    {
+      "id": 6,
+      "title": "1984",
+      "author_id": 2,
+      "resumen": "Una novela distópica que presenta una sociedad totalitaria bajo el control del Gran Hermano.",
+      "category": ["Drama", "Acción"],
+      "imagen": ""
+    },
+    {
+      "id": 7,
+      "title": "Don Quijote de la Mancha",
+      "author_id": 3,
+      "resumen": "La historia de un hidalgo que pierde la cordura y decide convertirse en caballero andante.",
+      "category": ["Aventura", "Histórica"],
+      "imagen": ""
+    },
+    {
+      "id": 8,
+      "title": "Orgullo y prejuicio",
+      "author_id": 4,
+      "resumen": "Una novela sobre las costumbres y problemas de la sociedad británica de principios del siglo XIX.",
+      "category": ["Romance", "Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 9,
+      "title": "Matar a un ruiseñor",
+      "author_id": 5,
+      "resumen": "Una historia sobre la injusticia racial y la pérdida de la inocencia en el sur de Estados Unidos.",
+      "category": ["Drama", "Histórica"],
+      "imagen": ""
+    },
+    {
+      "id": 10,
+      "title": "La metamorfosis",
+      "author_id": 6,
+      "resumen": "Un relato sobre la transformación de Gregor Samsa en un insecto gigante.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 11,
+      "title": "El gran Gatsby",
+      "author_id": 7,
+      "resumen": "La vida y tragedia de Jay Gatsby y su obsesión con Daisy Buchanan.",
+      "category": ["Drama", "Romance"],
+      "imagen": ""
+    },
+    {
+      "id": 12,
+      "title": "En busca del tiempo perdido",
+      "author_id": 8,
+      "resumen": "Una serie de siete volúmenes que exploran la memoria y el tiempo.",
+      "category": ["Histórica", "Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 13,
+      "title": "Crimen y castigo",
+      "author_id": 9,
+      "resumen": "La historia de un joven que comete un asesinato y enfrenta las consecuencias morales.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 14,
+      "title": "El proceso",
+      "author_id": 6,
+      "resumen": "Un hombre es arrestado y juzgado por un crimen que desconoce.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 15,
+      "title": "Los hermanos Karamazov",
+      "author_id": 9,
+      "resumen": "Un drama familiar que explora temas de fe, duda, y moralidad.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 16,
+      "title": "Fahrenheit 451",
+      "author_id": 10,
+      "resumen": "Una sociedad futura en la que los libros están prohibidos y los bomberos los queman.",
+      "category": ["Drama", "Acción"],
+      "imagen": ""
+    },
+    {
+      "id": 17,
+      "title": "Ulises",
+      "author_id": 11,
+      "resumen": "Un día en la vida de Leopold Bloom en Dublín.",
+      "category": ["Histórica"],
+      "imagen": ""
+    },
+    {
+      "id": 18,
+      "title": "Madame Bovary",
+      "author_id": 12,
+      "resumen": "La vida de una mujer que busca escapar de su vida aburrida a través de los romances.",
+      "category": ["Romance", "Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 19,
+      "title": "La Odisea",
+      "author_id": 13,
+      "resumen": "El viaje épico de Odiseo de regreso a Ítaca tras la Guerra de Troya.",
+      "category": ["Aventura", "Histórica"],
+      "imagen": ""
+    },
+    {
+      "id": 20,
+      "title": "Hamlet",
+      "author_id": 14,
+      "resumen": "La tragedia del príncipe de Dinamarca que busca vengar la muerte de su padre.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 21,
+      "title": "Divina Comedia",
+      "author_id": 15,
+      "resumen": "El viaje de Dante a través del Infierno, el Purgatorio y el Paraíso.",
+      "category": ["Histórica", "Aventura"],
+      "imagen": ""
+    },
+    {
+      "id": 22,
+      "title": "El retrato de Dorian Gray",
+      "author_id": 16,
+      "resumen": "Un hombre joven permanece eternamente joven mientras su retrato envejece.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 23,
+      "title": "Frankenstein",
+      "author_id": 17,
+      "resumen": "La creación de un ser viviente por un científico ambicioso y las consecuencias de su creación.",
+      "category": ["Acción", "Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 24,
+      "title": "Anna Karenina",
+      "author_id": 18,
+      "resumen": "La trágica historia de una mujer atrapada en un matrimonio infeliz y su búsqueda de amor.",
+      "category": ["Romance", "Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 25,
+      "title": "El guardián entre el centeno",
+      "author_id": 19,
+      "resumen": "Las reflexiones de un adolescente rebelde en Nueva York.",
+      "category": ["Drama"],
+      "imagen": ""
+    },
+    {
+      "id": 26,
+      "title": "Las aventuras de Huckleberry Finn",
+      "author_id": 20,
+      "resumen": "El viaje de un joven y un esclavo fugitivo por el río Mississippi.",
+      "category": ["Aventura"],
+      "imagen": ""
+    },
+    {
+      "id": 27,
+      "title": "El conde de Montecristo",
+      "author_id": 21,
+      "resumen": "La historia de un hombre injustamente encarcelado que busca venganza.",
+      "category": ["Acción", "Aventura"],
+      "imagen": ""
+    },
+    {
+      "id": 28,
+      "title": "Moby-Dick",
+      "author_id": 22,
+      "resumen": "La obsesión del capitán Ahab por cazar a una ballena blanca gigante,",
+      "category": ["Acción", "Aventura"],
+      "imagen": ""
+    }]
