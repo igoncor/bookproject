@@ -3,6 +3,7 @@ const Author = require('../models/authors.model');
 
 const getAllAuthors = async (req, res) => {
     try {
+		
       const authors = await Author.findAll({
         where: req.query
       })

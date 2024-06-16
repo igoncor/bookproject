@@ -1,4 +1,5 @@
-const router = require("express").Router()
+const router = require("express").Router();
+const {checkAuth} = require("../middlewares/middlewares");
 
 const {
   getAllReviews,
@@ -8,10 +9,18 @@ const {
   deleteReview
 } = require('../controllers/review.controller')
 
-
-router.get('/',  getAllReviews)
-router.get('/:id', getOneReview)
-router.post('/', createReview)
-router.put('/:id', updateReview)
-router.delete('/:id', deleteReview)
+  router.get('/',
+    checkAuth,
+    getAllReviews)
+  router.get('/:id',
+    checkAuth,
+    getOneReview)
+  router.post('/',checkAuth,
+    createReview)
+  router.put('/:id',
+    checkAuth,
+    updateReview)
+  router.delete('/:id',
+    checkAuth,
+    deleteReview)
 module.exports = router
