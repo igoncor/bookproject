@@ -9,6 +9,7 @@ const connection = new Sequelize(
      {
       host: process.env.DB_HOST,
       dialect: process.env.DB_DIALECT,
+      logging: false
     }
   );
 
@@ -27,7 +28,7 @@ const checkDB = async () => {
 //model sincronization
 const syncModels = async () => {
   try {
-    await connection.sync('alter')
+    await connection.sync()
     console.log('Models syncrhonized!')
   } catch (error) {
     console.error("Unable to sync models:")

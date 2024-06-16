@@ -76,12 +76,49 @@ async function createBook(req, res) {
     }
 }
 
+async function updateBook (req, res) {
+    try {
+        const [bookExist, film] = await Book.update(req.body, {
+            returning: true,
+            where: {
+                id: req.params.id,
+            },
+        })
+        if (bookExist !== 0) {
+            return res.status(200).json({ message: 'Book has been updated', book: book })
+        } else {
+            return res.status(404).send('Book has not found')
+        }
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+async function deleteBook(req, res) {
+    try {
+        const book = await Book.destroy({
+            where: {
+                id: req.params.id,
+            },
+        })
+        if (book) {
+            return res.status(200).json('Book has been deleted')
+        } else {
+            return res.status(404).send('Book has not found')
+        }
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 
 
 module.exports = {
   getAllBooks,
   getOneBook, 
   createBook,
+  updateBook,
+  deleteBook,
 }
 
 

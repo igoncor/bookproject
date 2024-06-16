@@ -17,12 +17,12 @@ const Author = connection.define(
         allowNull: false,
     },
     birth: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DATE,
         allowNull: false,
     },
     death: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+        type: DataTypes.DATE,
+        
     },
 }, 
     {

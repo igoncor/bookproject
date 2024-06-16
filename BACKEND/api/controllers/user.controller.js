@@ -29,15 +29,35 @@ async function getOneUser(req, res) {
 	}
 }
 
-async function createUser(req, res) {
+// async function createUser(req, res) {
+// 	try {
+// 		const user = await User.create(req.body)
+// 		return res.status(200).json({ message: 'User created', user: user })
+// 	} catch (error) {
+// 		res.status(500).send(error.message)
+// 	}
+// }
+//Función de creación de usuario que emplearía un administrador
+const createUser = async (req, res) => {
 	try {
-		const user = await User.create(req.body)
-		return res.status(200).json({ message: 'User created', user: user })
+	  //Debemos encriptar la contraseña, igual que en el signup
+	  const salt = bcrypt.genSaltSync(parseInt(process.env.BCRYPT_SALTS))
+	  req.body.password = bcrypt.hashSync(req.body.password, salt)
+  
+	  const user = await User.create(req.body)
+  
+	  res.status(201).json({
+		message: 'User created',
+		result: user
+	  })
 	} catch (error) {
-		res.status(500).send(error.message)
+	  console.log(error)
+	  res.status(500).json({
+		message: 'Error creating user',
+		result: error
+	  })
 	}
-}
-
+  }
 async function updateOneUser(req, res) {
 	try {
 		const [userExist, user] = await User.update(req.body, {
@@ -47,9 +67,9 @@ async function updateOneUser(req, res) {
 			},
 		})
         if (userExist !== 0) {
-			return res.status(200).json({ message: 'User updated', user: user })
+			return res.status(200).json({ message: 'User has been updated', user: user })
 		} else {
-			return res.status(404).send('User not found')
+			return res.status(404).send('User has not found')
 		}
 	} catch (error) {
 		return res.status(500).send(error.message)
@@ -64,9 +84,9 @@ async function deleteOneUser(req, res) {
 			},
 		})
 		if (user) {
-			return res.status(200).json('User deleted')
+			return res.status(200).json('User  has been deleted')
 		} else {
-			return res.status(404).send('User not found')
+			return res.status(404).send('User has not found')
 		}
 	} catch (error) {
 		return res.status(500).send(error.message)

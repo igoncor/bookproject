@@ -8,8 +8,8 @@ const defineRelations = require('./database/relations')
 
 const startDB = async () => {  
   await checkDB()          // 1. Comprobar conexión
-  // await defineRelations()  // 2. Importar modelos y definir sus relaciones
-  await syncModels()             // 3. Sincronizar modelos con la base de datos
+  await defineRelations()  // 2. Importar modelos y definir sus relaciones
+  syncModels()       // 3. Sincronizar modelos con la base de datos (no ponemos el await porque es lo último, no hay nada debajo)
 }
 
 const initAndListen = () => {
@@ -17,7 +17,11 @@ const initAndListen = () => {
   .use(cors())
   .use(morgan('dev'))
   .use(express.json())
+<<<<<<< HEAD
   .use("/api", require ("./api/routes")) 
+=======
+  .use("/api", require("./api/routes"))
+>>>>>>> c10bf411ddace4d16d57392fe35c94e9a0fce371
   .listen(3000, () => {
     console.log("Listening on port 3000")
   })
@@ -42,3 +46,4 @@ startAPI()
 //   console.log(`Server started! Listening on port ${process.env.PORT}`)
 //   startDB() // Iniciamos la conexión al servidor una vez nuestro servidor esté arrancado y esperando peticiones
 // })
+
