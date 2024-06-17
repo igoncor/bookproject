@@ -19,9 +19,11 @@ const initAndListen = () => {
   .use(express.json())
   .use("/api", require ("./api/routes")) 
   .listen(3000, () => {
-    console.log("Listening on port 3000")
+    console.log("Server started. Listening on port 3000")
   })
 }
+
+
 
 const startAPI = async () => {
   await startDB()
@@ -30,8 +32,9 @@ const startAPI = async () => {
 
 startAPI()
 
-// const router = require("./api/routes") // Instancia del router principal, alojado en /api/routes/index.js
- 
+
+ //app.use('/api', router) // Cualquier petición empieza con '/api'
+//const router = require("./api/routes") // Instancia del router principal, alojado en /api/routes/index.js 
 // const app = express()
 // app.use(express.json())
 // app.use(morgan('dev'))
