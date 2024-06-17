@@ -1,3 +1,4 @@
+const { application } = require('express')
 const Book = require ('../models/book.model')
 
 const getAllBooks = async (req, res) => {
@@ -19,6 +20,36 @@ const getAllBooks = async (req, res) => {
     console.log(error);
     res.status(500).json({
       message: "Error getting all books",
+      result: error,
+    });
+  }
+}
+
+const getBooksByAuthor = async (req, res) => {
+  const { author_id } = req.params; // Suponemos que author_id se pasa como parámetro en la URL
+
+  try {
+    const books = await Book.findAll({
+      where: {
+        author_id: author_id
+      }
+    });
+
+    if (!books || books.length === 0) {
+      return res.status(404).json({
+        message: 'No books found for the given author',
+        result: books
+      });
+    }
+
+    res.status(200).json({
+      message: 'Books fetched successfully',
+      result: books,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: 'Error getting books for the given author',
       result: error,
     });
   }
@@ -85,7 +116,8 @@ async function updateBook (req, res) {
             },
         })
         if (bookExist !== 0) {
-            return res.status(200).json({ message: 'Book has been updated', bookExist: bookExist })
+            return res.status(200).json({ message: 'Book has been updated', bookExist })
+            
         } else {
             return res.status(404).send('Book has not found')
         }
@@ -113,14 +145,14 @@ async function deleteBook(req, res) {
 
 
 
+
+
 module.exports = {
   getAllBooks,
   getOneBook, 
   createBook,
   updateBook,
   deleteBook,
+  getBooksByAuthor
 }
 
-
-
-  

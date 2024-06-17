@@ -5,7 +5,8 @@ const {
   getOneBook, 
   createBook,
   updateBook,
-  deleteBook
+  deleteBook,
+  getBooksByAuthor
 } = require('../controllers/book.controller')
 
 // const {
@@ -19,6 +20,8 @@ router.get('/:id', getOneBook)
 router.post('/', createBook)
 router.put('/:id', updateBook)
 router.delete('/:id', deleteBook)
+
+router.get('/author/:author_id', getBooksByAuthor)
 
 module.exports = router
 
