@@ -17,11 +17,7 @@ const initAndListen = () => {
   .use(cors())
   .use(morgan('dev'))
   .use(express.json())
-<<<<<<< HEAD
   .use("/api", require ("./api/routes")) 
-=======
-  .use("/api", require("./api/routes"))
->>>>>>> c10bf411ddace4d16d57392fe35c94e9a0fce371
   .listen(3000, () => {
     console.log("Listening on port 3000")
   })

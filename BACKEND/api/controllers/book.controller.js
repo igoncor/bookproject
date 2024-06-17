@@ -85,7 +85,7 @@ async function updateBook (req, res) {
             },
         })
         if (bookExist !== 0) {
-            return res.status(200).json({ message: 'Book has been updated', book: book })
+            return res.status(200).json({ message: 'Book has been updated', bookExist: bookExist })
         } else {
             return res.status(404).send('Book has not found')
         }

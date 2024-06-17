@@ -7,8 +7,7 @@ async function getAllUsers(req, res) {
 		const users = await User.findAll()
 		if (users) {
 			return res.status(200).json(users)
-		} else {
-			console.log("Borrame")
+		} else {			
 			return res.status(404).send('No users found')
 		}
 	} catch (error) {

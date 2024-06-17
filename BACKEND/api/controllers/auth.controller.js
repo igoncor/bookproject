@@ -15,7 +15,7 @@ const signup = async (req, res) => {
     const user = await User.create(req.body)
 
     // createContact_info es un método generado automáticamente por Sequelize, en el momento de definir una relación One to One entre User y ContactInfo. Podemos aprovecharla para crear automáticamente un nuevo registro de contact info vacío en el momento en el que un nuevo usuario se cree una cuenta, y ya estará automáticamente vinculado al nuevo usuario
-    await user.createContact_info()
+    // await user.createContact_info()
 
     // Generamos un token para devolver al cliente, así el usuario ya será capaz de realizar peticiones que reguieran estar logueado
     // {email: user.email} es la información que pasaremos como 'payload'. Cuando desencriptemos el token en el middleware de 'checkAuth', podremos acceder a la info que hayamos definido en este payload.

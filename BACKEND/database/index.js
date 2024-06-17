@@ -10,12 +10,8 @@ const connection = new Sequelize(
       host: process.env.DB_HOST,
       dialect: process.env.DB_DIALECT,
       logging: false
-<<<<<<< HEAD
     }
   );
-=======
-    });
->>>>>>> 930c53260bd3c1dff87dad1a787b816f492a3006
 
 //testing de la conexión
 const checkDB = async () => {
