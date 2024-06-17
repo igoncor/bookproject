@@ -6,10 +6,10 @@ const authorsRouter = require ('./authors.router')
 const authRouter = require ('./auth.router')
 const contactRouter = require('./contact.router')
 
+router.use('/auth', authRouter)
 router.use('/user', userRouter)
 router.use('/book', bookRouter)
 router.use('/authors', authorsRouter)
-router.use('/auth', authRouter)
 router.use('/contact', contactRouter)
 
 

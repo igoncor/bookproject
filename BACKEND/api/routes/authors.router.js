@@ -1,5 +1,5 @@
 const router = require("express").Router()
-
+const {checkAuth} = require("../middlewares/middlewares");
 const {
   getAllAuthors,
   getOneAuthor,
@@ -8,10 +8,19 @@ const {
   deleteAuthor
 } = require('../controllers/authors.controller')
 
-
-router.get('/',  getAllAuthors)
-router.get('/:id', getOneAuthor)
-router.post('/', createAuthor)
-router.put('/:id', updateAuthor)
-router.delete('/:id', deleteAuthor)
+router.get('/', 
+    checkAuth,
+    getAllAuthors)
+router.get('/:id', 
+    checkAuth,
+    getOneAuthor)
+router.post('/',
+    checkAuth,
+    createAuthor)
+router.put('/:id',
+    checkAuth,
+    updateAuthor)
+router.delete('/:id',
+    checkAuth, 
+    deleteAuthor)
 module.exports = router

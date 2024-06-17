@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize")
 const { connection } = require('../../database')
 
-const Favorites = connection.define(
+const Favorite = connection.define(
     "Favorite",
     {
         user_id: { 
@@ -17,5 +17,4 @@ const Favorites = connection.define(
       timestamps: false
     }
   )
-
-module.exports = Favorites
+module.exports = Favorite
