@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize")
 const { connection } = require('../../database')
 
-const Reviews = connection.define(
+const Review = connection.define(
     "Review",
     {
         user_id: { 
@@ -27,4 +27,4 @@ const Reviews = connection.define(
   )
     
 
-module.exports = Reviews
+module.exports = Review
