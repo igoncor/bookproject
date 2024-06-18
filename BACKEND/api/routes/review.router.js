@@ -10,12 +10,13 @@ const {
 } = require('../controllers/review.controller')
 
   router.get('/',
-    checkAuth,
+    
     getAllReviews)
   router.get('/:id',
-    checkAuth,
+    
     getOneReview)
-  router.post('/',checkAuth,
+  router.post('/',
+    checkAuth,
     createReview)
   router.put('/:id',
     checkAuth,

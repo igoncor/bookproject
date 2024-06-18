@@ -1,4 +1,4 @@
-const Favorite = require('../models/favorite.model');
+const Favorite = require('../models/favorites.model');
 
 
 const getAllFavorites = async (req, res) => {
@@ -41,13 +41,9 @@ const getAllFavorites = async (req, res) => {
 
 async function createFavorite(req, res) {
 	try {
-		const favorite = await Favorite.create({
-			name: req.body.name,
-			surname: req.body.surname,
-			country: req.body.country,
-			birth: req.body.birth,
-			death: req.body.death,
-		});
+		const favorite = await Favorite.create(
+			req.body
+		);
 		return res.status(201).json({ message: 'Favorite created', favorite: favorite });
 	} catch (error) {
 		res.status(500).send(error.message);

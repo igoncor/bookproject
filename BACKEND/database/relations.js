@@ -8,6 +8,7 @@ const Reviews = require('../api/models/review.model')
 const CategoryBook = require('../api/models/categories_book.model'); 
 const UserBook = require('../api/models/user_books.model'); 
 const BookWanted = require('../api/models/books_wanted.model');
+const booksWanted = require('../api/models/books_wanted.model')
 
 const defineRelations = () => {
    
@@ -21,6 +22,9 @@ const defineRelations = () => {
 //un usuario puede tener muchas reviews y cada registro en la tabla review pertenece a un único usuario
     User.hasMany(Reviews);
     Reviews.belongsTo(User);
+
+    Book.hasMany(Reviews);
+    Reviews.belongsTo(Book);
 
 //Una categoría puede tener muchos libros
     CategoryBook.hasMany(Book); //varios libros pueden pertenecer a la misma categoria

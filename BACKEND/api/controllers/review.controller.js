@@ -43,13 +43,10 @@ const getAllReviews = async (req, res) => {
 
 async function createReview(req, res) {
 	try {
-		const review = await Review.create({
-			name: req.body.name,
-			surname: req.body.surname,
-			country: req.body.country,
-			birth: req.body.birth,
-			death: req.body.death,
-		});
+		const review = await Review.create(
+			req.body
+			
+		);
 		return res.status(201).json({ message: 'Review created', review: review });
 	} catch (error) {
 		res.status(500).send(error.message);
