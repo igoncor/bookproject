@@ -1,19 +1,22 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
-import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import router from './router/index'
 
-import BookCard from "./components/BookCard/BookCard"
-import BookList from "./components/BookList/BookList"
-import SearchBar from './components/SearchBar/SearchBar'
+
+
+// import BookCard from "./components/BookCard/BookCard"
+// import BookList from "./components/BookList/BookList"
+// import SearchBar from './components/SearchBar/SearchBar'
 
 function App() {
  
 
   return (
     
-      <div>
-        
-      </div>
+  <>
+    <RouterProvider router= {router} />
+  </>
      
   )
 }
