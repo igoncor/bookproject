@@ -1,5 +1,8 @@
 // import { useState } from 'react'
 
+import { RouterProvider } from 'react-router-dom'
+import router from './router/index'
+
 
 
 // import BookCard from "./components/BookCard/BookCard"
@@ -11,9 +14,9 @@ function App() {
 
   return (
     
-      <>
-         You are in #App
-      </>
+  <>
+    <RouterProvider router= {router} />
+  </>
      
   )
 }
