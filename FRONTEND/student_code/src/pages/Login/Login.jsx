@@ -1,73 +1,70 @@
-// import{CardHeader,Card,CardContent,TextField, CardActions,Button} from '@mui/material';
-// import React from "react";
+
+// import { CardHeader, Card, CardContent, TextField, CardActions, Button,InputAdornment,Icon,Email,Lock,IconButton,VisibilityOff } from '@mui/material';
+// //import React from "react";
 // import { blue } from '@mui/material/colors';
-// function Login(){
-//     return(
-        
-//           <Card sx={{ maxWidth: '500px', backgroundColor: blue[300] }} raised={true}>
-//           <CardHeader title="Login"></CardHeader>
-//           <CardContent>
-//             <TextField
-//               label="Email"
-//               variant="outlined"
-//               margin="dense"
-//               fullWidth={true}
-//             ></TextField>
-//             <TextField
-//               label="Password"
-//               variant="outlined"
-//               margin="dense"
-//               fullWidth={true}
-//             ></TextField>
-//           </CardContent>
-//           <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+
+// function Login() {
+//     //const [isPassVisible, setIsPassVisible]  = useState(false)
+//   return (
+//     <Card sx={{ maxWidth: 500, backgroundColor: blue[300], margin: 'auto', mt: 4 }} raised={true}>
+//       <CardHeader title="Login" />
+//       <CardContent>
+//         <TextField
+//           label="Email"
+//           variant="outlined"
+//           margin="dense"
+//           fullWidth
+//           InputProps={{
+//             startAdornment: (
+//               <InputAdornment>
+//                 <Icon>
+//                   <Email />
+//                 </Icon>
+//               </InputAdornment>
+//             )
+//           }}
+//         />
+//         <TextField
+//             //type=(isPassVisible ? 'text' : 'password')
+//           type="password"
+//           label="Password"
+//           variant="outlined"
+//           margin="dense"
+//           fullWidth
+//           InputProps={{
+//             startAdornment: (
+//               <InputAdornment>
+//                 <Icon>
+//                   <Lock />
+//                 </Icon>
+//               </InputAdornment>
+//             ),
+//             endAdornment: (
+//               <InputAdornment>
+//                 <IconButton>
+//                 {/* onClick={() => {
+//                     setIsPassVisible((oldState) => !oldState)
+//                   }} */}
+//                   {/* {isPassVisible ? <Visibility/>>:<VisibilityOff/>} */}
+//                   <VisibilityOff />
+//                 </IconButton>
+//               </InputAdornment>
+//             )
+//           }}
+//         />
+//       </CardContent>
+//       <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
 //         <Button size="small" color="secondary" variant="contained">
 //           Register
 //         </Button>
-//         <Button size="small" color="primary" variant="contained">
+//         <Button size="small" color="success" variant="contained">
 //           Login
 //         </Button>
 //       </CardActions>
-//         </Card>
-//     )
+//     </Card>
+//   );
 // }
 
-// export default Login
+// export default Login;
 
-//segunda opcion
-import { CardHeader, Card, CardContent, TextField, CardActions, Button } from '@mui/material';
-//import React from "react";
-import { blue } from '@mui/material/colors';
-
-function Login() {
-  return (
-    <Card sx={{ maxWidth: 500, backgroundColor: blue[300], margin: 'auto', mt: 4 }} raised={true}>
-      <CardHeader title="Login" />
-      <CardContent>
-        <TextField
-          label="Email"
-          variant="outlined"
-          margin="dense"
-          fullWidth
-        />
-        <TextField
-          label="Password"
-          variant="outlined"
-          margin="dense"
-          type="password"
-          fullWidth
-        />
-      </CardContent>
-      <CardActions sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <Button size="small" color="secondary" variant="contained">
-          Register
-        </Button>
-        <Button size="small" color="primary" variant="contained">
-          Login
-        </Button>
-      </CardActions>
-    </Card>
-  );
-}
-
-export default Login;
+import Singup from "../../components/Singup";
