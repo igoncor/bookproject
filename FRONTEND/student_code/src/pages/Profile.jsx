@@ -2,6 +2,7 @@ import React from 'react'
 //import { getUserProfile } from "../../services/userService"
 import { useNavigate } from "react-router-dom" 
 import { useState, useEffect } from "react"
+import './Profile.css'
 
 
 function Profile() { 
@@ -21,12 +22,16 @@ function Profile() {
       }
   return ( //renderizado
     <div>
-        <button onClick={onLogout}>
+        <button onClick={onLogout}
+        style={{
+            position: 'fixed',
+            top: '10px', 
+            right: '10px'
+        }}
+        >
             Cerrar sesión
         </button>
-        {
-            localStorage.getItem('role') === 'admin' ? <h1>Soy Admin</h1> : <h1>Soy usuario</h1>
-        }
+            {localStorage.getItem('role') === 'admin' ? <h1>Admin</h1> : <h1>Mi perfil</h1>}
     </div>
   )
 }
