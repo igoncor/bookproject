@@ -3,6 +3,7 @@ const ContactInfo= require('../models/contact.model')
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const {validityToken}  = require('../middlewares/middlewares')
 
 // Función para que nuevos usuarios puedan crearse una cuenta
 const signup = async (req, res) => {
@@ -82,7 +83,20 @@ const login = async (req, res) => {
   }
 }
 
+const verifyToken = async (req, res) => {
+  try {
+    const token = req.headers.authorization;
+    await validityToken(token); // Verificar el token
+    res.json({ isValid: true });
+  } catch (error) {
+    console.error('Error al verificar el token:', error.message);
+    res.status(401).send(error.message);
+  }
+}
+
+
 module.exports = {
   signup,
-  login
+  login,
+  verifyToken
 }

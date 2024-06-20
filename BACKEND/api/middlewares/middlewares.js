@@ -27,6 +27,22 @@ function checkAuth(req, res, next) {
   )
 }
 
+async function validityToken(token) {
+    if (!token) {
+      throw new Error("No se ha encontrado token");
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+
+    const user = await User.findOne({ where: { email: decoded.email } });
+    if (!user) {
+      throw new Error("Token no válido");
+    }
+
+    return true; // Token válido
+  
+}
+
 function checkAdmin (req, res, next) {
   // Después de verificar la identidad del usuario en el middleware anterior (checkAuth), podemos acceder a res.locals y comprobar el role del usuario logueado. Si no es admin, rechazamos la petición y no permitimos continuar
   if (res.locals.user.role !== 'admin') {
@@ -39,5 +55,6 @@ function checkAdmin (req, res, next) {
 
 module.exports = {
   checkAuth,
-  checkAdmin
+  checkAdmin,
+  validityToken
 }

@@ -3,11 +3,11 @@
 import Login from "../../components/Login/Login";
 
 
-function LoginPages() {
+function LoginPage() {
   return (
     <Login></Login>
   )
 }
 
-export default LoginPages
+export default LoginPage
 
