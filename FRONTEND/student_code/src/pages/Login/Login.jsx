@@ -1,13 +1,13 @@
 
 
-import SignUp from "../../components/Singup/Singup";
+import Login from "../../components/Login/Login";
 
 
-function Login() {
+function LoginPages() {
   return (
-    <SignUp></SignUp>
+    <Login></Login>
   )
 }
 
-export default Login
+export default LoginPages
 
