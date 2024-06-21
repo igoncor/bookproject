@@ -2,6 +2,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -9,9 +11,10 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { postAuthSignUp } from '../../services/auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { postAuthSignIn } from '../../services/auth';
+
 
 function Copyright(props) {
   return (
@@ -28,43 +31,31 @@ function Copyright(props) {
 
 const defaultTheme = createTheme();
 
-export default function SignUpFormData() {
+export default function SignInFormData() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [name, setName] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
-
-  const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(String(email).toLowerCase());
-  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     setError('');
 
-    if (!name || !email || !password) {
+    if (!email || !password) {
       setError('Todos los campos son obligatorios');
       return;
     }
 
-    if (!validateEmail(email)) {
-      setError('Correo electrónico no válido');
-      return;
-    }
-
     const formData = {
-      name,
       email,
       password,
     };
 
     try {
-      await postAuthSignUp(formData);
+      await postAuthSignIn(formData);
       navigate('/home');
     } catch (error) {
-      setError('Error en el registro. Por favor, inténtalo de nuevo.');
+      setError('Error en el inicio de sesión. Por favor, inténtalo de nuevo.');
     }
   };
 
@@ -84,46 +75,35 @@ export default function SignUpFormData() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Registro
+            Acceso
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Grid container spacing={2}>
-              <Grid item xs={12} sm={12}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="Nombre"
-                  autoFocus
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="email"
-                  label="Correo electrónico"
-                  name="email"
-                  autoComplete="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  name="password"
-                  label="Contraseña"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </Grid>
-            </Grid>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Correo electrónico"
+              name="email"
+              autoComplete="email"
+              autoFocus
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Contraseña"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Recuérdame"
+            />
             {error && (
               <Typography color="error" variant="body2" align="center" sx={{ mt: 2 }}>
                 {error}
@@ -135,18 +115,23 @@ export default function SignUpFormData() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Registro
+              Acceder
             </Button>
-            <Grid container justifyContent="flex-end">
+            <Grid container>
+              <Grid item xs>
+                <Link href="#" variant="body2">
+                  ¿Olvidaste la contraseña?
+                </Link>
+              </Grid>
               <Grid item>
-                <Link href="/sign-in" variant="body2">
-                  ¿Tienes ya una cuenta? ¡Accede!
+                <Link href="/sign-up" variant="body2">
+                  {"¿No tienes cuenta? Regístrate!"}
                 </Link>
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 5 }} />
+        <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
   );

@@ -1,10 +1,10 @@
 
 import SignUpFormData from "../../components/SignUp/SignUpComponent";
 
-function GetSignUpComponent() {
+function SignUpPage() {
   return (
     <SignUpFormData></SignUpFormData>
   )
 }
 
-export default GetSignUpComponent
+export default SignUpPage

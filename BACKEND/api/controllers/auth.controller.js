@@ -1,5 +1,4 @@
 const User = require('../models/user.model')
-const ContactInfo= require('../models/contact.model')
 
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -22,13 +21,13 @@ const signup = async (req, res) => {
     const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET, { expiresIn: '1h' })
 
     res.status(201).json({
-      message: "Signup succesful",
+      message: "sign up succesful",
       result: token,
     })
   } catch (error) {
     console.log(error);
     res.status(500).json({
-      message: "Error signing up",
+      message: "Error on sign up",
       result: error,
     });
   }
