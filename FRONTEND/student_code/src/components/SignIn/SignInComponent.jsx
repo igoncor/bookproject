@@ -35,6 +35,7 @@ export default function SignInFormData() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
@@ -49,10 +50,12 @@ export default function SignInFormData() {
     const formData = {
       email,
       password,
+      rememberMe
     };
 
     try {
       await postAuthSignIn(formData);
+   
       navigate('/home');
     } catch (error) {
       setError('Error en el inicio de sesión. Por favor, inténtalo de nuevo.');
@@ -101,7 +104,7 @@ export default function SignInFormData() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
+              control={<Checkbox value="remember" color="primary" onChange={(e) => setRememberMe(e.target.checked)} />}
               label="Recuérdame"
             />
             {error && (
@@ -118,11 +121,6 @@ export default function SignInFormData() {
               Acceder
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link href="#" variant="body2">
-                  ¿Olvidaste la contraseña?
-                </Link>
-              </Grid>
               <Grid item>
                 <Link href="/sign-up" variant="body2">
                   {"¿No tienes cuenta? Regístrate!"}

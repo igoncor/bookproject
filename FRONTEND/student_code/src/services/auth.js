@@ -1,7 +1,11 @@
 import api from "./config";
 
-const handleResponse = (data) => {
-    localStorage.setItem('token', data.result);
+const handleResponse = (data, formData) => {
+    if (formData.rememberMe) {
+        localStorage.setItem('token', data.result);
+      } else {
+        sessionStorage.setItem('token', data.result);
+      }
 };
 
 const handleError = (error) => {
@@ -12,7 +16,7 @@ const handleError = (error) => {
 const postAuth = async (url, formData) => {
     try {
         const { data } = await api.post(url, formData);
-        handleResponse(data);
+        handleResponse(data, formData);
         return data;
     } catch (error) {
         handleError(error);
