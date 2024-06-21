@@ -1,9 +1,9 @@
 import React from 'react'
-//import { getUserProfile } from "../../services/userService"
+import { getUserProfile, getUserBooks } from "../../services/userService"
 import { useNavigate } from "react-router-dom" 
 import { useState, useEffect } from "react"
 import './Profile.css'
-
+//import BookCard from "../../components/BookCard/BookCard"
 import { Box } from "@mui/material"
 
 
@@ -37,15 +37,7 @@ function Profile() {
         navigate('/') //vuelve a la página de inicio
       }
 
-  //return ( //renderizado
-    //<div className="cuerpo">
-        //<button onClick={onLogout}
-        //className="logout-button">
-        //    Cerrar sesión
-        //</button>
-          //  <h1>{localStorage.getItem('role') === 'admin' ? 'Admin' : 'Mi perfil'}</h1>
-
-   // </div>
+  
    return (
     <>
         <Box className="profileContainer">
@@ -64,9 +56,7 @@ function Profile() {
         <h2>Mis libros favoritos</h2>
         </Box>
 
-
     </>
-
   )
 }
 

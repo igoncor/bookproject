@@ -6,13 +6,26 @@ const getUserProfile = async () => {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
-        })
-        return data
+        });
+        return data;
     } catch (error) {
-        console.log(error)
+        console.log(error);
+    }
+};
+
+export async function getUserBooks(id) {
+    try {
+        const { data } = await api.get(`/user/booking/${id}`, {
+            headers: {
+                Authorization: localStorage.getItem('token')
+            }
+        });
+        return data;
+    } catch (error) {
+        console.log(error);
     }
 }
 
 export {
-    getUserProfile
-}
+    getUserProfile,
+};
