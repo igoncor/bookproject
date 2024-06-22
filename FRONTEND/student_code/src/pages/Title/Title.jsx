@@ -1,14 +1,17 @@
 import React from 'react'
+
+
 import BookList from '../../components/BookList/BookList'
 import BookCard from '../../components/BookCard/BookCard'
 
-function home() {
+function Title() {
+  
+
   return (
     <div>
-        You are in #Home
-        
+        <BookList />
     </div>
   )
 }
 
-export default home
+export default Title
