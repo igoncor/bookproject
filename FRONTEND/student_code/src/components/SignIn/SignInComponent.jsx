@@ -55,8 +55,7 @@ export default function SignInFormData() {
 
     try {
       await postAuthSignIn(formData);
-   
-      navigate('/home');
+      navigate('/profile');
     } catch (error) {
       setError('Error en el inicio de sesión. Por favor, inténtalo de nuevo.');
     }

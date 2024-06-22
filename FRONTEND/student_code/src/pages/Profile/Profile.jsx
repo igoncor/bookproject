@@ -1,12 +1,12 @@
-import React from 'react'
-//import { getUserProfile } from "../../services/userService"
+
+
+import { getUserProfile } from "../../services/userService"
 import { useNavigate } from "react-router-dom" 
 import { useState, useEffect } from "react"
-import './Profile.css'
 
 
 function Profile() { 
-    const [user, setUser] = useState(null)
+    const [setUser] = useState(null)
     const navigate = useNavigate() 
     useEffect(() => { //para obtener datos del usuario
         const getUserData = async () => {
@@ -35,7 +35,6 @@ function Profile() {
     </div>
   )
 }
-
 
 
 

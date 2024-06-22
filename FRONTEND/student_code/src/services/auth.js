@@ -1,10 +1,12 @@
 import api from "./config";
 
 const handleResponse = (data, formData) => {
+    const {userId, token} = data.result;
+    localStorage.setItem('userId', userId);
     if (formData.rememberMe) {
-        localStorage.setItem('token', data.result);
+        localStorage.setItem('token',token);
       } else {
-        sessionStorage.setItem('token', data.result);
+        sessionStorage.setItem('token', token);
       }
 };
 

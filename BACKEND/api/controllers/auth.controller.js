@@ -22,7 +22,8 @@ const signup = async (req, res) => {
 
     res.status(201).json({
       message: "sign up succesful",
-      result: token,
+      result: {token, userId: user.id},
+
     })
   } catch (error) {
     console.log(error);
@@ -70,7 +71,7 @@ const login = async (req, res) => {
 
     res.status(200).json({
       message: "login succesful",
-      result: token,
+      result: {token, userId: user.id},
     });
   } catch (error) {
     console.log(error);

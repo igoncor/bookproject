@@ -62,7 +62,7 @@ export default function SignUpFormData() {
 
     try {
       await postAuthSignUp(formData);
-      navigate('/home');
+      navigate('/profile');
     } catch (error) {
       setError('Error en el registro. Por favor, inténtalo de nuevo.');
     }
