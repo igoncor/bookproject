@@ -33,9 +33,17 @@ const postAuthSignIn = async (formData) => {
     return postAuth('auth/sign-in', formData);
 };
 
+
+const getToken = () => {
+    return sessionStorage.getItem('token') || localStorage.getItem('token');
+};
+
+
+
 export {
     postAuthSignUp,
-    postAuthSignIn
+    postAuthSignIn,
+    getToken
 };
 
 

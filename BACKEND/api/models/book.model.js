@@ -12,7 +12,7 @@ const Book = connection.define(
         type: DataTypes.INTEGER,
         allowNull: false,
     },
-    resumen: {
+    summary: {
         type: DataTypes.TEXT,
         allowNull: false,
     },
@@ -24,6 +24,10 @@ const Book = connection.define(
         type: DataTypes.INTEGER,
         allowNUll: false,
     },
+    image: {
+         type: DataTypes.STRING,
+         allowNUll: true
+    }
 },  
     {
     timestamps: false

@@ -1,10 +1,10 @@
 import api from "./config";
-import {getToken} from "./auth";
+import {getToken} from "../services/auth";
 
-const getUserProfile = async () => {
+const getAllFavorites = async () => {
     try {
         const token = getToken();
-        const { data } = await api.get('user/profile', {
+        const { data } = await api.get('favorites', {
             headers: {
                 Authorization: token
             }
@@ -16,5 +16,5 @@ const getUserProfile = async () => {
 }
 
 export {
-    getUserProfile
+    getAllFavorites
 }
