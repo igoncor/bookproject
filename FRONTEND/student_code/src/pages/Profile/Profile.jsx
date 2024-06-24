@@ -1,5 +1,5 @@
-
-
+import { Box } from "@mui/material"
+import './Profile.css'
 import { getUserProfile } from "../../services/userService"
 import { useNavigate } from "react-router-dom" 
 import { useState, useEffect } from "react"
@@ -21,18 +21,24 @@ function Profile() {
         navigate('/') //vuelve a la página de inicio
       }
   return ( //renderizado
-    <div>
-        <button onClick={onLogout}
-        style={{
-            position: 'fixed',
-            top: '10px', 
-            right: '10px'
-        }}
-        >
-            Cerrar sesión
-        </button>
-            {localStorage.getItem('role') === 'admin' ? <h1>Admin</h1> : <h1>Mi perfil</h1>}
-    </div>
+    <>
+    <Box className="profileContainer">
+    <button onClick={onLogout}
+    className="logout-button">
+        Cerrar sesión
+    </button>
+        <h1>{localStorage.getItem('role') === 'admin' ? 'Admin' : 'Mi perfil'}</h1>
+    </Box>
+
+    <Box className="wantedWrapper">
+    <h2>Mis libros pendientes</h2>
+    </Box>
+
+    <Box className="favWrapper">
+    <h2>Mis libros favoritos</h2>
+    </Box>
+
+</>
   )
 }
 

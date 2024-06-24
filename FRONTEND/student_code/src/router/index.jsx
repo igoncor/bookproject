@@ -5,6 +5,7 @@ import SignUpPage from "../pages/SignUp/SignUp"
 import SignInPage from "../pages/SignIn/SignIn"
 import Profile from "../pages/Profile/Profile"
 
+
 const router = createBrowserRouter([
     {
         path: "/",

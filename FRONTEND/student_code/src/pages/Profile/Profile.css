@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(47, 47, 47);
+}
+
+.logout-button {
+    position: fixed;
+    bottom: 50px; 
+    right: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 0px;
+}
+
+.logout-button:hover {
+    background-color: rgb(238, 238, 214);
+    color: black;
+}
+
+
+h1 {
+    padding: 20px;
+    color: white;
+}
+
+
+.profileContainer {
+    background-color: rgb(28, 28, 28);
+    height: 6vw;
+}
+
+.wantedWrapper {
+    background-color: rgb(47, 47, 47);
+    height: auto;
+}
+
+.favWrapper {
+    background-color: rgb(47, 47, 47);
+    height: auto;
+    
+}
+
+h2 {
+    color: white;
+    padding: 20px;
+    font-size: 12px;
+}
