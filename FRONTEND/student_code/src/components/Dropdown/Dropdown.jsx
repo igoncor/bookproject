@@ -44,9 +44,10 @@ export default function Dropdown() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>Títulos</MenuItem>
-        <MenuItem onClick={handleClose}>Autores</MenuItem>
+        <MenuItem onClick={handleClose}>Perfil</MenuItem>
+        <MenuItem onClick={handleClose}>Libros</MenuItem>
+        <MenuItem onClick={handleClose}>Pendientes</MenuItem>
+        <MenuItem onClick={handleClose}>Favoritos</MenuItem>
       </Menu>
     </div>
   );

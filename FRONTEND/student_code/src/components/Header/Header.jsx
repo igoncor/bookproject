@@ -3,6 +3,7 @@ import { AppBar, Button } from '@mui/material'
 // const options = [ "Home", "Profile", "login"]
 
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,7 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import Dropdown from '../Dropdown/Dropdown';
 function Header() {
-  const options = [ "Home", "Profile", "login"]
+  // const options = [ "Home", "Profile", "login"]
   return (
     // <AppBar position= 'sticky' sx= {{display: "flex", flexDirection: "row"}}>
     //    { options.map ((option, idx) => { 
@@ -31,7 +32,10 @@ function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             News
           </Typography>
-          <Button color="inherit">Login</Button>
+          {/* <Button color="inherit">Login</Button> */}
+          <Link to="/api/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Button color="inherit">Login</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
