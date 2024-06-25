@@ -1,11 +1,11 @@
-import { api } from './config';
+import api from './config';
 
 import axios from 'axios';
 
 
 export const getAllBooks = async () => {
   try {
-    const response = await api.get('/api/book');
+    const response = await api.get('/book');
     if (Array.isArray(response.data.result)) {
       return response.data.result; 
     } else {

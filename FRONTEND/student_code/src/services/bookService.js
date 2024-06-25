@@ -1,9 +1,10 @@
 import api from "./config";
 import {getToken} from "../services/auth";
 
+
 const getBookById = async (id) => {
     try {
-        const token = getToken();
+        const token = localStorage.getItem('token');
         const { data } = await api.get(`book/${id}`, {
             headers: {
                 Authorization: token
