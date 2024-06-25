@@ -5,6 +5,7 @@ import { getAllBooks } from '../../services/titleService.js';
 import logo from '../../assets/logo_1.png'; 
 import Rank from '../../components/Rank/Rank'
 import './Home.css'
+// import CarouselBook from '../../components/Carousel/CarouselBook.jsx'
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
@@ -33,9 +34,10 @@ const BookList = () => {
 
    const topBooks = books.filter(book => book.likes === 5);
   // console.log('Número de libros con likes=5:', topBooks.length);
-console.log (books);
-  return (
+// console.log (books);
+  return (    
   <div>
+    {/* <CarouselBook /> */}
     <img src={logo} alt="Logo 1" style={{ maxWidth: '100%', marginBottom: '20px' }} />
       <p>You are in Home</p>
     <div className="read-this">
