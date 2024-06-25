@@ -7,6 +7,7 @@ import Profile from "../pages/Profile/Profile"
 import Favorite from "../pages/Favorite/Favorite"
 import Pending from "../pages/Pending/Pending"
 
+
 const router = createBrowserRouter([
     {
         path: "/",
