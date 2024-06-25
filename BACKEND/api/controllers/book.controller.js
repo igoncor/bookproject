@@ -1,9 +1,12 @@
 const { application } = require('express')
 const Book = require ('../models/book.model')
-
+const Author = require ('../models/authors.model.js')
 const getAllBooks = async (req, res) => {
   try {
-    const books = await Book.findAll()
+    const books = await Book.findAll(
+      { include: Author}      
+    )
+    
 
     if (!books) {
       res.status(404).json({

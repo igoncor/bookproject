@@ -6,6 +6,7 @@ import SignInPage from "../pages/SignIn/SignIn"
 import Profile from "../pages/Profile/Profile"
 import Favorite from "../pages/Favorite/Favorite"
 import Pending from "../pages/Pending/Pending"
+import Title from "../pages/Title/Title"
 
 
 const router = createBrowserRouter([
@@ -18,7 +19,8 @@ const router = createBrowserRouter([
             {path: "/sign-in", element: <SignInPage />},
             {path: "/profile", element: <Profile />},
             {path: "/favorite", element: <Favorite/>},
-            {path: "/pending", element: <Pending/>}
+            {path: "/pending", element: <Pending/>},
+            {path: "/titles", element: <Title />},
         ]
     },
 ])

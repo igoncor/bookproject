@@ -1,0 +1,50 @@
+/* BookList.css (o el nombre de tu archivo CSS) */
+
+/* Estilos para BookList.jsx */
+.read-this {
+    text-align: center;
+    background-color: #121212 !important;
+    /* Asegura que el color de fondo sea aplicado */
+    color: #ffffff !important;
+    /* Asegura que el color del texto sea blanco */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilos para read-this */
+.read-this {
+    border: 2px solid #555 !important;
+    /* Asegura que el color del borde sea aplicado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.read-this h2 {
+    color: #fff !important;
+    /* Asegura que el color del texto sea blanco */
+    margin-bottom: 10px;
+}
+
+/* Estilos para top-rank */
+.top-rank {
+    border: 2px solid #f7b718 !important;
+    /* Asegura que el color del borde sea aplicado */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+.top-rank h2 {
+    color: #f7b718 !important;
+    /* Asegura que el color del texto sea dorado */
+    margin-bottom: 15px;
+}

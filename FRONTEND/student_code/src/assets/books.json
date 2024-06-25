@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "title": "El Señor de los Anillos I. La Comunidad del Anillo",
+        "author_id": "1",
+        "resumen": "En la adormecida e idílica Comarca, un joven hobbit recibe un encargo: custodiar el Anillo Único y emprender el viaje para su destrucción en la Grieta del Destino.",
+        "category_id": "1",
+        "imgURL": "https://literalenlinea.com/el-senor-de-los-anillos-la-comunidad-del-anillo/"
+    },
+    {
+        "id": 2,
+        "title": "El Señor de los Anillos II. Las Dos Torres",
+        "author_id": "1",
+        "resumen": "La Comunidad se ha roto, pero la misión de destruir el Anillo sigue adelante.",
+        "category_id": "1",
+        "imgURL": "https://example.com/img/lotr2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "El Señor de los Anillos III. El Retorno del Rey",
+        "author_id": "1",
+        "resumen": "Las fuerzas de Sauron han atacado Minas Tirith, la capital de Gondor, en su asalto final a la raza de los hombres.",
+        "category_id": "1",
+        "imgURL": "https://example.com/img/lotr3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Harry Potter y la piedra filosofal",
+        "author_id": "2",
+        "resumen": "Harry Potter descubre en su undécimo cumpleaños que es hijo de dos conocidos magos.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp1.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Harry Potter y la cámara secreta",
+        "author_id": "2",
+        "resumen": "Harry Potter regresa a su segundo año en Hogwarts con una advertencia terrible de un elfo doméstico.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp2.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Harry Potter y el prisionero de Azkaban",
+        "author_id": "2",
+        "resumen": "Harry Potter descubre que un peligroso asesino ha escapado de la prisión de Azkaban y parece estar tras él.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp3.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Harry Potter y el cáliz de fuego",
+        "author_id": "2",
+        "resumen": "Harry Potter es inesperadamente elegido para competir en el peligroso Torneo de los Tres Magos.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp4.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Harry Potter y la Orden del Fénix",
+        "author_id": "2",
+        "resumen": "Harry Potter se enfrenta a la creciente amenaza de Lord Voldemort.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp5.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Harry Potter y el misterio del príncipe",
+        "author_id": "2",
+        "resumen": "Harry Potter descubre más sobre el oscuro pasado de Voldemort gracias a un misterioso libro de pociones.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp6.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Harry Potter y las reliquias de la Muerte",
+        "author_id": "2",
+        "resumen": "Harry Potter y sus amigos buscan los Horrocruxes para derrotar a Voldemort de una vez por todas.",
+        "category_id": "2",
+        "imgURL": "https://example.com/img/hp7.jpg"
+    },
+    {
+        "id": 11,
+        "title": "Juego de Tronos",
+        "author_id": "3",
+        "resumen": "En un mundo donde los veranos duran décadas y los inviernos pueden durar toda una vida, se tejen intrigas y luchas de poder.",
+        "category_id": "3",
+        "imgURL": "https://example.com/img/got1.jpg"
+    },
+    {
+        "id": 12,
+        "title": "Choque de Reyes",
+        "author_id": "3",
+        "resumen": "Los reinos de Poniente se enfrentan a múltiples amenazas mientras el invierno se acerca.",
+        "category_id": "3",
+        "imgURL": "https://example.com/img/got2.jpg"
+    },
+    {
+        "id": 13,
+        "title": "Tormenta de Espadas",
+        "author_id": "3",
+        "resumen": "Las alianzas cambian rápidamente mientras los reyes de Poniente luchan por el control del Trono de Hierro.",
+        "category_id": "3",
+        "imgURL": "https://example.com/img/got3.jpg"
+    },
+    {
+        "id": 14,
+        "title": "Festín de Cuervos",
+        "author_id": "3",
+        "resumen": "Los sobrevivientes de la guerra libran batallas de otra índole mientras tratan de reconstruir sus vidas.",
+        "category_id": "3",
+        "imgURL": "https://example.com/img/got4.jpg"
+    },
+    {
+        "id": 15,
+        "title": "Danza de Dragones",
+        "author_id": "3",
+        "resumen": "El invierno se acerca y con él una guerra aún más grande que la que ha sacudido los Siete Reinos.",
+        "category_id": "3",
+        "imgURL": "https://example.com/img/got5.jpg"
+    },
+    {
+        "id": 16,
+        "title": "El Código Da Vinci",
+        "author_id": "4",
+        "resumen": "El profesor Robert Langdon es llamado a investigar un misterioso asesinato en el Louvre.",
+        "category_id": "4",
+        "imgURL": "https://example.com/img/davinci.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Ángeles y Demonios",
+        "author_id": "4",
+        "resumen": "Robert Langdon es llamado a desentrañar un misterio que amenaza con destruir el Vaticano.",
+        "category_id": "4",
+        "imgURL": "https://example.com/img/angels.jpg"
+    },
+    {
+        "id": 18,
+        "title": "El Símbolo Perdido",
+        "author_id": "4",
+        "resumen": "Robert Langdon se enfrenta a una conspiración que amenaza con cambiar el curso de la historia.",
+        "category_id": "4",
+        "imgURL": "https://example.com/img/symbol.jpg"
+    },
+    {
+        "id": 19,
+        "title": "Inferno",
+        "author_id": "4",
+        "resumen": "Robert Langdon debe descifrar un código basado en la obra de Dante para detener una catástrofe.",
+        "category_id": "4",
+        "imgURL": "https://example.com/img/inferno.jpg"
+    },
+    {
+        "id": 20,
+        "title": "Origen",
+        "author_id": "4",
+        "resumen": "Robert Langdon trata de descubrir los secretos de la creación de la humanidad y el destino de la Tierra.",
+        "category_id": "4",
+        "imgURL": "https://example.com/img/origen.jpg"
+    }
+]
