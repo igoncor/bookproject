@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -16,16 +15,7 @@ import Dropdown from '../Dropdown/Dropdown';
 function Header() {
   // const options = [ "Home", "Profile", "login"]
   return (
-    // <AppBar position= 'sticky' sx= {{display: "flex", flexDirection: "row"}}>
-    //    { options.map ((option, idx) => { 
-    //      return <Button key={idx} sx= {{ color: "white"}}>
-    //         {option}
-
-    //      </Button>
-    //    })} 
-    // </AppBar>
-
-       <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
          <Dropdown />
@@ -33,7 +23,7 @@ function Header() {
             News
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
-          <Link to="/api/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">Login</Button>
           </Link>
         </Toolbar>

@@ -6,6 +6,8 @@ import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
+import { Link } from 'react-router-dom';
+import './Dropdown.css'
 export default function Dropdown() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -44,10 +46,16 @@ export default function Dropdown() {
           'aria-labelledby': 'basic-button',
         }}
       >
+        <MenuItem onClick={handleClose} component={Link} to="/home">Home</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/profile">Perfil</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/titles">Libros</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/pending">Pendientes</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/favorites">Favoritos</MenuItem>
+        {/* <MenuItem onClick={handleClose}>Home</MenuItem>
         <MenuItem onClick={handleClose}>Perfil</MenuItem>
         <MenuItem onClick={handleClose}>Libros</MenuItem>
         <MenuItem onClick={handleClose}>Pendientes</MenuItem>
-        <MenuItem onClick={handleClose}>Favoritos</MenuItem>
+        <MenuItem onClick={handleClose}>Favoritos</MenuItem> */}
       </Menu>
     </div>
   );

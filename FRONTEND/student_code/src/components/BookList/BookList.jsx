@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import './BookList.css';
 import BookCard from '../BookCard/BookCard'; 
 import getAllBooks from '../../services/titleService'; 
+
 
 const BookList = () => {
     const [books, setBooks] = useState([]);
@@ -30,7 +32,7 @@ const BookList = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     return (
-        <div className="list">
+        <div className="book-list">
             <h2>List of Books:</h2>
             <div className="book-grid">
                 {books.map(book => (
