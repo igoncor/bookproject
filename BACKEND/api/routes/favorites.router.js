@@ -6,9 +6,13 @@ const {
   getOneFavorite,
   createFavorite,
   updateFavorite,
-  deleteFavorite
+  deleteFavorite,
+  getMyFavorite
 } = require('../controllers/favorite.controller')
 
+router.get('/me',
+  checkAuth,
+  getMyFavorite)  
 
 router.get('/',
   checkAuth,
@@ -16,6 +20,8 @@ router.get('/',
 router.get('/:id', 
   checkAuth,
   getOneFavorite)
+
+
 router.post('/',
   checkAuth, 
   createFavorite)
