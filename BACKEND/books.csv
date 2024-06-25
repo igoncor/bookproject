@@ -1,21 +1,21 @@
-title,author_id,resumen,category_id
-"El Señor de los Anillos I. La Comunidad del Anillo",1,"En la adormecida e idílica Comarca, un joven hobbit recibe un encargo: custodiar el Anillo Único y emprender el viaje para su destrucción en la Grieta del Destino.",1
-"El Señor de los Anillos II. Las Dos Torres",1,"La Comunidad se ha roto, pero la misión de destruir el Anillo sigue adelante.",1
-"El Señor de los Anillos III. El Retorno del Rey",1,"Las fuerzas de Sauron han atacado Minas Tirith, la capital de Gondor, en su asalto final a la raza de los hombres.",1
-"Harry Potter y la piedra filosofal",2,"Harry Potter descubre en su undécimo cumpleaños que es hijo de dos conocidos magos.",2
-"Harry Potter y la cámara secreta",2,"Harry Potter regresa a su segundo año en Hogwarts con una advertencia terrible de un elfo doméstico.",2
-"Harry Potter y el prisionero de Azkaban",2,"Harry Potter descubre que un peligroso asesino ha escapado de la prisión de Azkaban y parece estar tras él.",2
-"Harry Potter y el cáliz de fuego",2,"Harry Potter es inesperadamente elegido para competir en el peligroso Torneo de los Tres Magos.",2
-"Harry Potter y la Orden del Fénix",2,"Harry Potter se enfrenta a la creciente amenaza de Lord Voldemort.",2
-"Harry Potter y el misterio del príncipe",2,"Harry Potter descubre más sobre el oscuro pasado de Voldemort gracias a un misterioso libro de pociones.",2
-"Harry Potter y las reliquias de la Muerte",2,"Harry Potter y sus amigos buscan los Horrocruxes para derrotar a Voldemort de una vez por todas.",2
-"Juego de Tronos",3,"En un mundo donde los veranos duran décadas y los inviernos pueden durar toda una vida, se tejen intrigas y luchas de poder.",3
-"Choque de Reyes",3,"Los reinos de Poniente se enfrentan a múltiples amenazas mientras el invierno se acerca.",3
-"Tormenta de Espadas",3,"Las alianzas cambian rápidamente mientras los reyes de Poniente luchan por el control del Trono de Hierro.",3
-"Festín de Cuervos",3,"Los sobrevivientes de la guerra libran batallas de otra índole mientras tratan de reconstruir sus vidas.",3
-"Danza de Dragones",3,"El invierno se acerca y con él una guerra aún más grande que la que ha sacudido los Siete Reinos.",3
-"El Código Da Vinci",4,"El profesor Robert Langdon es llamado a investigar un misterioso asesinato en el Louvre.",4
-"Ángeles y Demonios",4,"Robert Langdon es llamado a desentrañar un misterio que amenaza con destruir el Vaticano.",4
-"El Símbolo Perdido",4,"Robert Langdon se enfrenta a una conspiración que amenaza con cambiar el curso de la historia.",4
-"Inferno",4,"Robert Langdon debe descifrar un código basado en la obra de Dante para detener una catástrofe.",4
-"Origen",4,"Robert Langdon trata de descubrir los secretos de la creación de la humanidad y el destino de la Tierra.",4
+title,resumen,likes,imageURL,authorId,categoriesBookId
+"El Señor de los Anillos I. La Comunidad del Anillo","En la adormecida e idílica Comarca, un joven hobbit recibe un encargo: custodiar el Anillo Único y emprender el viaje para su destrucción en la Grieta del Destino.",4.5,"https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",1,1
+"El Señor de los Anillos II. Las Dos Torres","La Comunidad se ha roto, pero la misión de destruir el Anillo sigue adelante.",4.7,"https://images-na.ssl-images-amazon.com/images/I/91k8ouYrW-L.jpg",1,1
+"El Señor de los Anillos III. El Retorno del Rey","Las fuerzas de Sauron han atacado Minas Tirith, la capital de Gondor, en su asalto final a la raza de los hombres.",4.8,"https://images-na.ssl-images-amazon.com/images/I/91MBf7uG8wL.jpg",1,1
+"Harry Potter y la piedra filosofal","Harry Potter descubre en su undécimo cumpleaños que es hijo de dos conocidos magos.",4.6,"https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",2,2
+"Harry Potter y la cámara secreta","Harry Potter regresa a su segundo año en Hogwarts con una advertencia terrible de un elfo doméstico.",4.5,"https://images-na.ssl-images-amazon.com/images/I/91HHxxtA1wL.jpg",2,2
+"Harry Potter y el prisionero de Azkaban","Harry Potter descubre que un peligroso asesino ha escapado de la prisión de Azkaban y parece estar tras él.",4.7,"https://images-na.ssl-images-amazon.com/images/I/81lAPl9Fl0L.jpg",2,2
+"Harry Potter y el cáliz de fuego","Harry Potter es inesperadamente elegido para competir en el peligroso Torneo de los Tres Magos.",4.7,"https://images-na.ssl-images-amazon.com/images/I/81a4kCNuH+L.jpg",2,2
+"Harry Potter y la Orden del Fénix","Harry Potter se enfrenta a la creciente amenaza de Lord Voldemort.",4.6,"https://images-na.ssl-images-amazon.com/images/I/91OINeHnJGL.jpg",2,2
+"Harry Potter y el misterio del príncipe","Harry Potter descubre más sobre el oscuro pasado de Voldemort gracias a un misterioso libro de pociones.",4.5,"https://images-na.ssl-images-amazon.com/images/I/81p2+4nYtkL.jpg",2,2
+"Harry Potter y las reliquias de la Muerte","Harry Potter y sus amigos buscan los Horrocruxes para derrotar a Voldemort de una vez por todas.",4.8,"https://images-na.ssl-images-amazon.com/images/I/91rQDOxD92L.jpg",2,2
+"Juego de Tronos","En un mundo donde los veranos duran décadas y los inviernos pueden durar toda una vida, se tejen intrigas y luchas de poder.",4.7,"https://images-na.ssl-images-amazon.com/images/I/91dSMhdIzTL.jpg",3,3
+"Choque de Reyes","Los reinos de Poniente se enfrentan a múltiples amenazas mientras el invierno se acerca.",4.6,"https://images-na.ssl-images-amazon.com/images/I/91b0C2YNSrL.jpg",3,3
+"Tormenta de Espadas","Las alianzas cambian rápidamente mientras los reyes de Poniente luchan por el control del Trono de Hierro.",4.8,"https://images-na.ssl-images-amazon.com/images/I/91wRu7E5KuL.jpg",3,3
+"Festín de Cuervos","Los sobrevivientes de la guerra libran batallas de otra índole mientras tratan de reconstruir sus vidas.",4.5,"https://images-na.ssl-images-amazon.com/images/I/81r8GANM5PL.jpg",3,3
+"Danza de Dragones","El invierno se acerca y con él una guerra aún más grande que la que ha sacudido los Siete Reinos.",4.6,"https://images-na.ssl-images-amazon.com/images/I/81+f5wOvkJL.jpg",3,3
+"El Código Da Vinci","El profesor Robert Langdon es llamado a investigar un misterioso asesinato en el Louvre.",4.6,"https://images-na.ssl-images-amazon.com/images/I/81iAADhXXAL.jpg",4,4
+"Ángeles y Demonios","Robert Langdon es llamado a desentrañar un misterio que amenaza con destruir el Vaticano.",4.5,"https://images-na.ssl-images-amazon.com/images/I/91Fid-I06WL.jpg",4,4
+"El Símbolo Perdido","Robert Langdon se enfrenta a una conspiración que amenaza con cambiar el curso de la historia.",4.4,"https://images-na.ssl-images-amazon.com/images/I/91tDnEO2v7L.jpg",4,4
+"Inferno","Robert Langdon debe descifrar un código basado en la obra de Dante para detener una catástrofe.",4.3,"https://images-na.ssl-images-amazon.com/images/I/81+K4b8GKUL.jpg",4,4
+"Origen","Robert Langdon trata de descubrir los secretos de la creación de la humanidad y el destino de la Tierra.",4.2,"https://images-na.ssl-images-amazon.com/images/I/81DKX0kIS3L.jpg",4,4
