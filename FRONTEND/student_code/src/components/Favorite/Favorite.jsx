@@ -1,21 +1,9 @@
-// import React from 'react'
-
-// function favorite() {
-//   return (
-//     <div>
-//         You are in #favorite
-//     </div>
-//   )
-// }
-
-// export default favorite
-////////////////////////////////////////////////
 import React, { useState, useEffect } from 'react';
 
-import Button from '@mui/material/Button';
+//import Button from '@mui/material/Button';
 
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
+//import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -48,6 +36,7 @@ const useStyles = styled((theme) => ({
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
+    
   },
   cardMedia: {
     paddingTop: '56.25%', // 16:9
@@ -59,6 +48,7 @@ const useStyles = styled((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  
 }));
 
 
@@ -108,28 +98,29 @@ export default function Favorites() {
         <Grid container spacing={4}>
           {favorites.map((favorite, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
+              <Card sx={{ border: '5px solid yellow', padding: '4px',}}
+              
+              className={classes.card}>
+                
+                
                 <CardMedia
                   className={classes.cardMedia}
-                  image={favorite.image || "https://www.bing.com/images/search?view=detailV2&ccid=R93Or3NL&id=C1307C60EA113090201489178D16CFAEF832744E&thid=OIP.R93Or3NLjhihyni2_xRbFwHaE8&mediaurl=https%3a%2f%2fwww.wallpaperflare.com%2fstatic%2f512%2f909%2f111%2fbook-old-vintage-chipped-wallpaper.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.47ddceaf734b8e18a1ca78b6ff145b17%3frik%3dTnQy%252bK7PFo0XiQ%26pid%3dImgRaw%26r%3d0&exph=4000&expw=6000&q=book&simid=608043481585686858&FORM=IRPRST&ck=304537E6DA2EE8DE08E0613C9847C24B&selectedIndex=1&itb=0"}
+                  component="img"
+                  image={favorite.image}// || "https://www.bing.com/images/search?view=detailV2&ccid=R93Or3NL&id=C1307C60EA113090201489178D16CFAEF832744E&thid=OIP.R93Or3NLjhihyni2_xRbFwHaE8&mediaurl=https%3a%2f%2fwww.wallpaperflare.com%2fstatic%2f512%2f909%2f111%2fbook-old-vintage-chipped-wallpaper.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.47ddceaf734b8e18a1ca78b6ff145b17%3frik%3dTnQy%252bK7PFo0XiQ%26pid%3dImgRaw%26r%3d0&exph=4000&expw=6000&q=book&simid=608043481585686858&FORM=IRPRST&ck=304537E6DA2EE8DE08E0613C9847C24B&selectedIndex=1&itb=0"}
                   title={favorite.title}
+                  
+                  
                 />
                 <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography gutterBottom variant="h5" component="h2" >
                     {favorite.title}
                   </Typography>
                   <Typography>
-                    {favorite.description}
+                    {favorite.summary}
                   </Typography>
+                  
                 </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
-                  <Button size="small" color="primary">
-                    Edit
-                  </Button>
-                </CardActions>
+               
               </Card>
             </Grid>
           ))}
