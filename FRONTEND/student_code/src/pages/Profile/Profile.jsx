@@ -48,6 +48,8 @@ import { useState, useEffect } from 'react';
 import { Avatar, Box, Button, Container, CssBaseline, Grid, Paper, Typography, Link, } from '@mui/material';
 import { styled } from '@mui/system';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import "./Profile.css"
+
 
 const useStyles = styled((theme) => ({
   root: {
@@ -159,19 +161,19 @@ const Profile = () => {
           <AccountCircleIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          User Profile
+          Mi perfil
         </Typography>
         <Box className={classes.profileDetails}>
           <Typography variant="h6">John Doe</Typography>
           <Typography variant="body1">johndoe@example.com</Typography>
-          <Typography variant="body1">Age: 30</Typography>
+          <Typography variant="body1">Edad: 30</Typography>
           <Typography variant="body1">Reading Level: Advanced</Typography>
         </Box>
         <Button variant="contained" color="primary" className={classes.button}>
-          Edit Profile
+          Editar perfil
         </Button>
         <Button variant="contained" color="secondary" className={classes.button}>
-          Logout
+          Cerrar sesión
         </Button>
       </Paper>
       <Box className={classes.timer}>
