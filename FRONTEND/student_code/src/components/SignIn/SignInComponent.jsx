@@ -42,9 +42,11 @@ export default function SignInFormData() {
     };
 
     try {
-      await postAuthSignIn(formData);
+      const {result} = await postAuthSignIn(formData);
+      localStorage.setItem('token', result.token)
       navigate('/profile');
     } catch (error) {
+      console.error(error)
       setError('Error en el inicio de sesión. Por favor, inténtalo de nuevo.');
     }
   };

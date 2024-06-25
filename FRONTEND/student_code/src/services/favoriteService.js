@@ -1,10 +1,9 @@
 import api from "./config";
-import {getToken} from "../services/auth";
 
-const getAllFavorites = async () => {
+const getMyFavorites = async () => {
     try {
-        const token = getToken();
-        const { data } = await api.get('favorites', {
+        const token = localStorage.getItem('token');
+        const { data } = await api.get('favorites/me', {
             headers: {
                 Authorization: token
             }
@@ -16,5 +15,5 @@ const getAllFavorites = async () => {
 }
 
 export {
-    getAllFavorites
+    getMyFavorites
 }

@@ -1,5 +1,5 @@
 const Favorite = require('../models/favorites.model');
-
+const Book = require('../models/book.model');
 
 const getAllFavorites = async (req, res) => {
     try {
@@ -85,10 +85,25 @@ async function deleteFavorite(req, res) {
 	}
 }
 
+async function getMyFavorite (req,res){
+	try {
+	
+		const result = await Favorite.findAll({
+			where:{userId: res.locals.user.id},
+			include:{model: Book}			
+		})
+		res.status(200).json(result)
+
+	} catch (error) {
+		res.status(500).send(error.message)
+	}
+}
+
 module.exports = {
 	getAllFavorites,
 	getOneFavorite,
 	createFavorite,
 	updateFavorite,
 	deleteFavorite,
+	getMyFavorite
 };

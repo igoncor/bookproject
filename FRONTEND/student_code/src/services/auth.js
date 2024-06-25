@@ -1,36 +1,32 @@
 import api from "./config";
 
-const handleResponse = (data, formData) => {
-    const {userId, token} = data.result;
-    localStorage.setItem('userId', userId);
-    if (formData.rememberMe) {
-        localStorage.setItem('token',token);
-      } else {
-        sessionStorage.setItem('token', token);
-      }
-};
 
-const handleError = (error) => {
-    console.error(error);
-    throw error; 
-};
 
-const postAuth = async (url, formData) => {
+
+
+// const postAuthSignUp = async (formData) => {
+//     return postAuth('auth/sign-up', formData);
+// };
+const postAuthSignUp = async (formData) => {
     try {
-        const { data } = await api.post(url, formData);
-        handleResponse(data, formData);
-        return data;
+        const {data} = await api.post('auth/sign-up', formData);
+        
+        return data
     } catch (error) {
-        handleError(error);
+        console.error(error)
     }
 };
-
-const postAuthSignUp = async (formData) => {
-    return postAuth('auth/sign-up', formData);
-};
-
+//const postAuthSignIn = async (formData) => {
+//   return postAuth('auth/sign-in', formData);
+//};
 const postAuthSignIn = async (formData) => {
-    return postAuth('auth/sign-in', formData);
+    try {
+        const {data} = await api.post('auth/sign-in', formData);
+        
+        return data
+    } catch (error) {
+        console.error(error)
+    }
 };
 
 
