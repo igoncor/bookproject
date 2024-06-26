@@ -9,22 +9,23 @@ import StarIcon from '@mui/icons-material/Star';
 
 import getAllBooks from '../../services/titleService'; 
 import getAllAuthors from '../../services/titleService';
+import createFavorite from '../../services/createFavoriteService';
 
-const labels = {
-  // 0.5: 'Useless',
-  // 1: 'Useless+',
-  // 1.5: 'Poor',
-  // 2: 'Poor+',
-  // 2.5: 'Ok',
-  // // 3: 'Ok+',
-  // 3.5: 'Good',
-  // 4: 'Good+',
-  // 4.5: 'Excellent',
-  // 5: 'Excellent+',
-};
+const labels = {};
 
 function BookCard( { book } ) {
-  let value = 1;
+  
+  // const addToList = async (book) => {
+  //   try {
+  //     const response = await createFavorite(book);
+  //     if (response) {
+  //       console.log('Book added to favorites:', response);
+  //     }
+  //   } catch (error) {
+  //     console.error('Error adding book to favorites:', error);
+  //   }
+  // };
+  // let value = 1;
   return (
     <div className="book-card">
       <img src={book.imageURL} alt={book.title} className="book-img" style={{ height: '300px', width: '150px' }} />

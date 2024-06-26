@@ -22,7 +22,7 @@ function Header() {
             {/* <img src={logo} alt="Logo 1" style={{ maxWidth: '100%', marginBottom: '20px' }} /> */}
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
-          <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Link to="/sign-in" style={{ textDecoration: 'none', color: 'inherit' }}>
             <Button color="inherit">Login</Button>
           </Link>
         </Toolbar>
