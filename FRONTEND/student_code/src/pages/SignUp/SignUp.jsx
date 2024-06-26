@@ -1,4 +1,3 @@
-
 import SignUpFormData from "../../components/SignUp/SignUpComponent";
 
 function SignUpPage() {

@@ -1,9 +1,9 @@
 import api from "./config";
 
-const getMyFavorites = async () => {
+const getMyPendings = async () => {
     try {
         const token = localStorage.getItem('token');
-        const { data } = await api.get('favorites/me', {
+        const { data } = await api.get('pendings/me', {
             headers: {
                 Authorization: token
             }
@@ -14,10 +14,10 @@ const getMyFavorites = async () => {
     }
 }
 
-const deleteFavorite = async (id) => {
+const deletePending = async (id) => {
     try {
         const token = localStorage.getItem('token');
-        const { data } = await api.delete(`favorites/${id}`, {
+        const { data } = await api.delete(`pendings/${id}`, {
             headers: {
                 Authorization: token
             }
@@ -27,9 +27,8 @@ const deleteFavorite = async (id) => {
         console.log(error)
     }
 }
-
 
 export {
-    getMyFavorites,
-    deleteFavorite
+    getMyPendings,
+    deletePending
 }
