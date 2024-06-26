@@ -9,22 +9,23 @@ import StarIcon from '@mui/icons-material/Star';
 
 import getAllBooks from '../../services/titleService'; 
 import getAllAuthors from '../../services/titleService';
-import createFavorite from '../../services/createFavoriteService';
+import { createFavorite } from '../../services/createFavoriteService';
 
 const labels = {};
 
 function BookCard( { book } ) {
   
-  // const addToList = async (book) => {
-  //   try {
-  //     const response = await createFavorite(book);
-  //     if (response) {
-  //       console.log('Book added to favorites:', response);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error adding book to favorites:', error);
-  //   }
-  // };
+  const addToList = async (problema) => {
+    try {
+      console.log(problema)
+      const response = await createFavorite(problema);
+      if (response) {
+        console.log('Book added to favorites:', response);
+      }
+    } catch (error) {
+      console.error('Error adding book to favorites:', error);
+    }
+  };
   // let value = 1;
   return (
     <div className="book-card">
@@ -33,7 +34,7 @@ function BookCard( { book } ) {
       {/* <p>{book.resumen}</p> */}      
       <p> {book.author.name} {book.author.surname}</p>
       {/* <p>Category ID: {book.categoriesBookId}</p> */}      
-      <button onClick={() => addToList(book)}>Add to List</button>
+      <button onClick={() => addToList(book.id)}>Add to List</button>
       {/* <button onClick={() => removeToList(book)}>Remove from List</button> */}
       <Box
       sx={{
