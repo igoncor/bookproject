@@ -93,7 +93,7 @@ export default function Favorites() {
                 <CardMedia
                   className={classes.cardMedia}
                   component="img"
-                  image={favorite.book.imageURL}// || "https://www.bing.com/images/search?view=detailV2&ccid=R93Or3NL&id=C1307C60EA113090201489178D16CFAEF832744E&thid=OIP.R93Or3NLjhihyni2_xRbFwHaE8&mediaurl=https%3a%2f%2fwww.wallpaperflare.com%2fstatic%2f512%2f909%2f111%2fbook-old-vintage-chipped-wallpaper.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.47ddceaf734b8e18a1ca78b6ff145b17%3frik%3dTnQy%252bK7PFo0XiQ%26pid%3dImgRaw%26r%3d0&exph=4000&expw=6000&q=book&simid=608043481585686858&FORM=IRPRST&ck=304537E6DA2EE8DE08E0613C9847C24B&selectedIndex=1&itb=0"}
+                  image={favorite.book.imageURL}
                   title={favorite.book.title}
                   
                   

@@ -13,6 +13,7 @@ const getMyFavorites = async () => {
         console.log(error)
     }
 }
+
 const deleteFavorite = async (id) => {
     try {
         const token = localStorage.getItem('token');

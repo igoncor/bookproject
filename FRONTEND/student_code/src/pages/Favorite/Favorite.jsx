@@ -1,5 +1,3 @@
-
-
 import FavoriteUserData from "../../components/Favorite/Favorite"
 
 

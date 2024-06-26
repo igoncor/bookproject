@@ -1,12 +1,6 @@
 import api from "./config";
 
 
-
-
-
-// const postAuthSignUp = async (formData) => {
-//     return postAuth('auth/sign-up', formData);
-// };
 const postAuthSignUp = async (formData) => {
     try {
         const {data} = await api.post('auth/sign-up', formData);
@@ -16,9 +10,8 @@ const postAuthSignUp = async (formData) => {
         console.error(error)
     }
 };
-//const postAuthSignIn = async (formData) => {
-//   return postAuth('auth/sign-in', formData);
-//};
+
+
 const postAuthSignIn = async (formData) => {
     try {
         const {data} = await api.post('auth/sign-in', formData);
