@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import BookCard from '../../components/BookCard/BookCard';
 import { getAllBooks } from '../../services/titleService.js';
-import logo from '../../assets/logo_1.png'; 
+
 import Rank from '../../components/Rank/Rank'
 import './Home.css'
 // import CarouselBook from '../../components/Carousel/CarouselBook.jsx'
@@ -38,7 +38,7 @@ const BookList = () => {
   return (    
   <div>
     {/* <CarouselBook /> */}
-    <img src={logo} alt="Logo 1" style={{ maxWidth: '100%', marginBottom: '20px' }} />
+    
       <p>You are in Home</p>
     <div className="read-this">
       <h2>Qué leer:</h2>
