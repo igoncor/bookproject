@@ -1,106 +1,20 @@
-<<<<<<< HEAD
-// CategoryBook.jsx
-=======
 
-// import React from 'react';
-// import PropTypes from 'prop-types';
-// import MenuItem from '@mui/material/MenuItem';
-// import Select from '@mui/material/Select';
-// import FormControl from '@mui/material/FormControl';
-// import InputLabel from '@mui/material/InputLabel';
-
-// const categories = [
-//   { id: 1, name: 'Fantasía' },
-//   { id: 2, name: 'Misterio' },
-//   { id: 3, name: 'Terror' },
-//   { id: 4, name: 'Poesía' },
-  
-// ];
-
-// function CategoryBook({ selectedCategory, onChange }) {
-//   return (
-//     <FormControl fullWidth>
-//       <InputLabel id="category-select-label">Categoría</InputLabel>
-//       <Select
-//         labelId="category-select-label"
-//         id="category-select"
-//         value={selectedCategory}
-//         label="Category"
-//         onChange={onChange}
-//       >
-//         <MenuItem value="">
-//           <em>Todas</em>
-//         </MenuItem>     
-//          {categories.map((category) => (
-//           <MenuItem key={category.id} value={category.id}>
-//             {category.name}
-//           </MenuItem>
-//         ))}
-//       </Select>
-//     </FormControl>
-//   );
-// }
-
-// CategoryBook.propTypes = {
-//   selectedCategory: PropTypes.string,
-//   onChange: PropTypes.func.isRequired
-// };
-
-// export default CategoryBook;
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> home
-=======
->>>>>>> 4fdd87805b8e1c8d3c76eed98f94812a923956b3
-import React from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
-<<<<<<< HEAD
-=======
 import Box from '@mui/material/Box';
->>>>>>> home
 
 const categories = [
   { id: 1, name: 'Fantasía' },
   { id: 2, name: 'Misterio' },
   { id: 3, name: 'Terror' },
   { id: 4, name: 'Poesía' },
-<<<<<<< HEAD
-  
-=======
->>>>>>> home
 ];
 
 function CategoryBook({ selectedCategory, onChange }) {
   return (
-<<<<<<< HEAD
-    <FormControl fullWidth>
-      <InputLabel id="category-select-label">Categoría</InputLabel>
-      <Select
-        labelId="category-select-label"
-        id="category-select"
-        value={selectedCategory}
-        label="Category"
-        onChange={onChange}
-      >
-        <MenuItem value="">
-          <em>Todas</em>
-        </MenuItem>     
-         {categories.map((category) => (
-          <MenuItem key={category.id} value={category.id}>
-            {category.name}
-          </MenuItem>
-        ))}
-      </Select>
-    </FormControl>
-=======
     <Box
       sx={{
         height: '100px',
@@ -164,18 +78,12 @@ function CategoryBook({ selectedCategory, onChange }) {
         </Select>
       </FormControl>
     </Box>
->>>>>>> home
   );
 }
 
 CategoryBook.propTypes = {
-<<<<<<< HEAD
-  selectedCategory: PropTypes.string,
-  onChange: PropTypes.func.isRequired
-=======
   selectedCategory: PropTypes.number,
   onChange: PropTypes.func.isRequired,
->>>>>>> home
 };
 
 export default CategoryBook;

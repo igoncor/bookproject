@@ -23,11 +23,7 @@ function Header() {
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
           <Link to="/sign-in" style={{ textDecoration: 'none', color: 'inherit' }}>
-<<<<<<< HEAD
-            <Button color="inherit">Login</Button>
-=======
             <Button color="inherit">Sign In</Button>
->>>>>>> 3a8e9995035d45f722fb2f52bf800c1cd2a8b292
           </Link>
         </Toolbar>
       </AppBar>

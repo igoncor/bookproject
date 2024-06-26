@@ -132,13 +132,9 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { getAllBooks } from '../../services/titleService';
-<<<<<<< HEAD
-import SearchBook from '../../components/SearchBar/SearchBar'
-=======
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import BookCard from '../../components/BookCard/BookCard'
->>>>>>> home
 
 function BookList({ search, selectedCategory }) {
   const [books, setBooks] = useState([]);
@@ -149,46 +145,6 @@ function BookList({ search, selectedCategory }) {
     const fetchBooks = async () => {
       try {
         let data = await getAllBooks();
-<<<<<<< HEAD
-
-        // Filtrar por categoría si hay una categoría seleccionada
-        if (selectedCategory) {
-          data = data.filter((book) => book.categoriesBookId === selectedCategory);
-        }
-
-        // Filtrar por término de búsqueda si hay un término de búsqueda
-        if (search) {
-          data = data.filter((book) =>
-            book.title.toLowerCase().includes(search.toLowerCase())
-          );
-        }
-
-        setBooks(data);
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchBooks();
-  }, [search, selectedCategory]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return (
-    <div>
-      <h2>Lista de Libros:</h2>
-      <ul>
-        {books.map((book) => (
-          <li key={book.id}>
-            <h3>{book.title}</h3>
-          </li>
-        ))}
-      </ul>
-    </div>
-=======
         if (selectedCategory) {
           data = data.filter((book) => book.categoriesBookId === selectedCategory);
         }
@@ -220,7 +176,6 @@ function BookList({ search, selectedCategory }) {
         ))}
       </Grid>
     </Box>
->>>>>>> home
   );
 }
 
