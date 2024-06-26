@@ -34,25 +34,56 @@
 
 
 
-// Title.jsx
+
+// import React, { useState } from 'react';
+// import CategoryBook from '../../components/CategoryBook/CategoryBook';
+// import BookList from '../../components/BookList/BookList';
+
+// function Title() {
+//   const [selectedCategory, setSelectedCategory] = useState('');
+
+//   const handleCategoryChange = (event) => {
+//     setSelectedCategory(event.target.value); 
+//   };
+
+//   return (
+//     <div className="title-container">
+//       <h1>Select Category</h1>
+//       <CategoryBook selectedCategory={selectedCategory} onChange={handleCategoryChange} />     
+//       <BookList selectedCategory={selectedCategory} />
+//     </div>
+//   );
+// }
+
+// export default Title;
+
+
+
 import React, { useState } from 'react';
+import SearchBar from '../../components/SearchBar/SearchBar';
 import CategoryBook from '../../components/CategoryBook/CategoryBook';
 import BookList from '../../components/BookList/BookList';
 
 function Title() {
-  const [selectedCategory, setSelectedCategory] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const handleCategoryChange = (event) => {
-    setSelectedCategory(event.target.value); 
+  const handleSearch = (term) => {
+    setSearchTerm(term);
   };
 
-  return (
-    <div className="title-container">
-      <h1>Select Category</h1>
-      <CategoryBook selectedCategory={selectedCategory} onChange={handleCategoryChange} />     
-      <BookList selectedCategory={selectedCategory} />
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  return (    
+    <div>     
+      <SearchBar searchBook={handleSearch} />
+      <CategoryBook selectedCategory={selectedCategory} onChange={handleCategoryChange} />
+      <BookList search={searchTerm} selectedCategory={selectedCategory} />
     </div>
   );
 }
 
 export default Title;
+

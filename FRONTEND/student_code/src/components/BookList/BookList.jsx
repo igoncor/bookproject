@@ -70,39 +70,105 @@
 
 
 
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { getAllBooks } from '../../services/titleService.js';
-import CategoryBook from '../../components/CategoryBook/CategoryBook'; 
+// import React, { useState, useEffect } from 'react';
+// import PropTypes from 'prop-types';
+// import { getAllBooks } from '../../services/titleService.js';
+// import CategoryBook from '../../components/CategoryBook/CategoryBook'; 
 
-function BookList({ selectedCategory }) {
+// function BookList({ selectedCategory }) {
+//   const [books, setBooks] = useState([]);
+
+//   useEffect(() => {
+//     async function fetchBooks() {
+//       try {
+//         let data = await getAllBooks();       
+//         if (selectedCategory) {
+// // console.log(typeof selectedCategory)
+// // console.log(typeof data[0].categoriesBookId)
+// console.log('Probando data:', data)
+//           data = data.filter(book => book.categoriesBookId === parseInt(selectedCategory));
+//        console.log('Probando selectedCategory:', selectedCategory);
+//            console.log('Probando data después de filter:', data)
+//         }      
+//         setBooks(data);
+//       } catch (error) {
+//         console.error('Error fetching books:', error);
+//       }
+//     }
+   
+
+//     fetchBooks();
+//   }, [selectedCategory]);
+
+//   // const filteredBooks = books.filter(book =>
+//   // console.log(books)
+   
+
+//   return (
+//     <div>
+//       <h2>Lista de Libros:</h2>
+//       <ul>
+//         {books.map((book) => (
+//           <li key={book.id}>
+//             <h3>{book.title}</h3>           
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// BookList.propTypes = {
+//   selectedCategory: PropTypes.number,
+// };
+
+// export default BookList;
+
+
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { getAllBooks } from '../../services/titleService';
+import SearchBook from '../../components/SearchBar/SearchBar'
+
+function BookList({ search, selectedCategory }) {
   const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchBooks() {
+    const fetchBooks = async () => {
       try {
-        let data = await getAllBooks();       
+        let data = await getAllBooks();
+
+        // Filtrar por categoría si hay una categoría seleccionada
         if (selectedCategory) {
-// console.log(typeof selectedCategory)
-// console.log(typeof data[0].categoriesBookId)
-console.log('Probando data:', data)
-          data = data.filter(book => book.categoriesBookId === parseInt(selectedCategory));
-       console.log('Probando selectedCategory:', selectedCategory);
-           console.log('Probando data después de filter:', data)
-        }      
+          data = data.filter((book) => book.categoriesBookId === selectedCategory);
+        }
+
+        // Filtrar por término de búsqueda si hay un término de búsqueda
+        if (search) {
+          data = data.filter((book) =>
+            book.title.toLowerCase().includes(search.toLowerCase())
+          );
+        }
+
         setBooks(data);
       } catch (error) {
-        console.error('Error fetching books:', error);
+        setError(error);
+      } finally {
+        setLoading(false);
       }
-    }
-   
+    };
 
     fetchBooks();
-  }, [selectedCategory]);
+  }, [search, selectedCategory]);
 
-  // const filteredBooks = books.filter(book =>
-  // console.log(books)
-   
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
   return (
     <div>
@@ -110,7 +176,7 @@ console.log('Probando data:', data)
       <ul>
         {books.map((book) => (
           <li key={book.id}>
-            <h3>{book.title}</h3>           
+            <h3>{book.title}</h3>
           </li>
         ))}
       </ul>
@@ -119,6 +185,7 @@ console.log('Probando data:', data)
 }
 
 BookList.propTypes = {
+  search: PropTypes.string,
   selectedCategory: PropTypes.number,
 };
 
