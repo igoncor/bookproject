@@ -1,9 +1,22 @@
-import React from 'react'
+import PropTypes from 'prop-types';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
 
-function searchBar() {
+function SearchBar({ searchBook }) {
   return (
-    <div>searchBar</div>
-  )
+    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2, mb: 2 }}>
+      <TextField
+        label="Search Books"
+        variant="outlined"
+        onChange={(e) => searchBook(e.target.value)}
+        sx={{ width: '80%', maxWidth: '600px' }}
+      />
+    </Box>
+  );
 }
 
-export default searchBar
+SearchBar.propTypes = {
+  searchBook: PropTypes.func.isRequired,
+};
+
+export default SearchBar;
