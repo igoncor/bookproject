@@ -9,7 +9,25 @@ function SearchBar({ searchBook }) {
         label="Search Books"
         variant="outlined"
         onChange={(e) => searchBook(e.target.value)}
-        sx={{ width: '80%', maxWidth: '600px' }}
+        sx={{
+          width: '80%',
+          maxWidth: '300px',
+          marginTop: '10px',
+          backgroundColor: 'white',
+          borderRadius: 1,
+          boxShadow: 1,
+          '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: '#cccccc',
+            },
+            '&:hover fieldset': {
+              borderColor: '#aaaaaa',
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: '#888888',
+            },
+          },
+        }}
       />
     </Box>
   );
@@ -20,3 +38,4 @@ SearchBar.propTypes = {
 };
 
 export default SearchBar;
+
