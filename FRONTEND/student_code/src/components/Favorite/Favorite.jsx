@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
-import { getMyFavorites } from '../../services/favoriteService';
+import { getMyFavorites, deleteFavorite } from '../../services/favoriteService';
 
 
 const useStyles = styled((theme) => ({
@@ -107,7 +107,18 @@ export default function Favorites() {
                   </Typography>
                   
                 </CardContent>
-               
+                <button  onClick={ async () => 
+                
+                {
+                 await deleteFavorite(favorite.id)
+                  fetchFavorites()
+                }
+                
+                  
+                }
+                
+                
+                  >Borrar de Favoritos</button>
               </Card>
             </Grid>
           ))}
