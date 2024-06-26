@@ -8,48 +8,31 @@
     color: white;
   }
   
-  /* Estilos para el papel (Paper) */
+  /* Estilos para el paper (contenedor con la info principal del perfil) */
   .paper {
     margin-top: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px;
-    background-color: #424242;
-    color: white;
+    padding: 10px;
     width: 100%;
+    background-color: rgb(243, 242, 242) !important;
   }
   
-  /* Estilos para el avatar */
+  
   .avatar {
-    margin: 8px;
+    margin: 10px;
   }
-  
-  /* Estilos para los botones */
-  .button {
-    margin: 8px;
-  }
-  
-  /* Estilos para los libros favoritos */
-  .favoriteBooks {
-    margin-top: 24px;
-    width: 70%;
-  }
-  
-  /* Estilos para los cards de libros */
+   
+
+ 
   .bookCard {
     padding: 16px;
     border: 1px solid #ccc;
     background-color: #616161;
   }
   
-  /* Estilos para el temporizador */
-  .timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 24px;
-  }
+
   
   /* Estilos para el contenedor del perfil */
   .profileContainer {
@@ -57,6 +40,7 @@
     justify-content: space-between;
     width: 100%;
     margin-top: 24px;
+    background-color: rgb(243, 242, 242) !important;
   }
   
   /* Estilos para los comentarios */
@@ -67,20 +51,30 @@
     width: 50%;
   }
   
-  /* Estilos para el card de links */
-  .linkCard {
-    background-color: #424242;
-    padding: 16px;
-    margin-top: 24px;
-    color: white;
-    flex: 1;
-    margin-left: 16px;
-    width: 30%;
+  .button {
+    color: black !important;              
   }
+
+  .button:hover {
+    background-color: rgb(255, 255, 171) !important;
+  }
+
   
-  /* Estilos para los links */
-  .link {
-    color: #1976d2; /* Ejemplo de color primario */
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
+h6 {
+  color: black;
+}
+
+.pendientesBooks {
+  padding: 24px;
+}
+
+.favoriteBooks {
+  margin-top: 24px;
+  width: 70%;
+}
+
+.favoriteBooks, .pendientesBooks {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
