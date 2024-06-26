@@ -1,1 +1,80 @@
+/* Estilos para el contenedor principal */
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Estilos para el paper (contenedor con la info principal del perfil) */
+  .paper {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(243, 242, 242) !important;
+  }
+  
+  
+  .avatar {
+    margin: 10px;
+  }
+   
+
+ 
+  .bookCard {
+    padding: 16px;
+    border: 1px solid #ccc;
+    background-color: #616161;
+  }
+  
+
+  
+  /* Estilos para el contenedor del perfil */
+  .profileContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 24px;
+    background-color: rgb(243, 242, 242) !important;
+  }
+  
+  /* Estilos para los comentarios */
+  .comments {
+    background-color: #424242;
+    padding: 16px;
+    margin-top: 24px;
+    width: 50%;
+  }
+  
+  .button {
+    color: black !important;              
+  }
+
+  .button:hover {
+    background-color: rgb(255, 255, 171) !important;
+  }
+
+  
+h6 {
+  color: black;
+}
+
+.pendientesBooks {
+  padding: 24px;
+}
+
+.favoriteBooks {
+  margin-top: 24px;
+  width: 70%;
+}
+
+.favoriteBooks, .pendientesBooks {
+  width: 100%;
+  margin-bottom: 20px;
+}
 

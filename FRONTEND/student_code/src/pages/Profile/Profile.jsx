@@ -44,91 +44,13 @@
 
 
 
+import "./Profile.css";
 import { useState, useEffect } from 'react';
 import { Avatar, Box, Button, Container, CssBaseline, Grid, Paper, Typography, Link, } from '@mui/material';
-import { styled } from '@mui/system';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import "./Profile.css"
 
-
-const useStyles = styled((theme) => ({
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: theme.spacing(2),
-    backgroundColor: '#333', // Dark background
-    color: 'white', // White text
-  },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
-  button: {
-    margin: theme.spacing(1),
-  },
-  paper: {
-    marginTop: theme.spacing(4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: theme.spacing(3),
-    backgroundColor: '#424242', // Grey background for the card
-    color: 'white', // White text color
-    width: '100%', // Expand to full width
-  },
-  profileDetails: {
-    marginBottom: theme.spacing(2),
-  },
-  favoriteBooks: {
-    marginTop: theme.spacing(4),
-    width: '70%', // Adjust width to fit within the screen
-  },
-  bookCard: {
-    padding: theme.spacing(2),
-    border: '1px solid #ccc',
-    backgroundColor: '#616161', // Grey background for the book cards
-  },
-  timer: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: theme.spacing(4),
-  },
-  timerDisplay: {
-    fontSize: '2rem',
-    marginRight: theme.spacing(2),
-  },
-  profileContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '100%',
-    marginTop: theme.spacing(4),
-  },
-  comments: {
-    backgroundColor: '#424242',
-    padding: theme.spacing(2),
-    marginTop: theme.spacing(4),
-    width: '50%', // Adjust width to fit within the screen
-  },
-  linkCard: {
-    backgroundColor: '#424242',
-    padding: theme.spacing(2),
-    marginTop: theme.spacing(4),
-    color: 'white',
-    flex: 1, // Ensures the card takes available space
-    marginLeft: theme.spacing(2),
-    width: '30%', // Adjust width to fit within the screen
-  },
-  link: {
-    color: theme.palette.primary.main,
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-  }
-}));
 
 const Profile = () => {
-  const classes = useStyles();
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
 
@@ -152,69 +74,94 @@ const Profile = () => {
     }
     return () => clearInterval(interval);
   }, [isActive, seconds]);
+ 
+  
+
 
   return (
-    <Container component="main" maxWidth="xl" className={classes.root}>
-      <CssBaseline />
-      <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
-          <AccountCircleIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Mi perfil
-        </Typography>
-        <Box className={classes.profileDetails}>
-          <Typography variant="h6">John Doe</Typography>
-          <Typography variant="body1">johndoe@example.com</Typography>
-          <Typography variant="body1">Edad: 30</Typography>
-          <Typography variant="body1">Reading Level: Advanced</Typography>
-        </Box>
-        <Button variant="contained" color="primary" className={classes.button}>
-          Editar perfil
-        </Button>
-        <Button variant="contained" color="secondary" className={classes.button}>
-          Cerrar sesión
-        </Button>
-      </Paper>
-      <Box className={classes.timer}>
-        <Typography className={classes.timerDisplay}>{seconds}s</Typography>
-        <Button onClick={toggle} variant="contained" color="primary" className={classes.button}>
-          {isActive ? 'Pause' : 'Start'}
-        </Button>
-        <Button onClick={reset} variant="contained" color="secondary" className={classes.button}>
-          Reset
-        </Button>
+    <Container component="main" maxWidth="xl" className="mainContainer">
+    <CssBaseline />
+    <Paper className="paper" elevation={3}>
+      <Avatar className="avatar">
+        <AccountCircleIcon />
+      </Avatar>
+      <Typography component="h1" variant="h5">
+        Mi perfil
+      </Typography>
+      <Box className="profileDetails">
+        <Typography variant="h6">Pepe Grillo</Typography>
+        <Typography variant="body1">pepito@gmail.com</Typography>
       </Box>
-      <Box className={classes.profileContainer}>
-        <Box className={classes.favoriteBooks}>
-          <Typography variant="h6">Favorite Books</Typography>
-          <Grid container spacing={2} className={classes.gridContainer}>
-            {[1, 2, 3, 4].map((book) => (
-              <Grid item key={book} xs={12} sm={6}>
-                <Paper className={classes.bookCard}>
-                  <Typography variant="h6">Book Title {book}</Typography>
-                  <Typography variant="body2">Book summary goes here...</Typography>
-                </Paper>
-              </Grid>
-            ))}
+      <Button variant="text" className="button">Editar perfil</Button>
+      <Button variant="text" className="button">Cerrar sesión</Button>
+    </Paper>
+
+    <Box className="profileContainer">
+      <Box className="favoriteBooks">
+        <Typography variant="h6">Mis libros favoritos</Typography>
+        <Grid container spacing={2} className="gridContainer">
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">El Símbolo Perdido</Typography>
+             
+            </Paper>
           </Grid>
-        </Box>
-        <Box className={classes.linkCard}>
-          <Typography variant="h6">Check Reading Speed</Typography>
-          <Typography variant="body2">Test your reading speed and see how fast you can read.</Typography>
-          <Link href="/reading-speed-test" className={classes.link}>
-            Start Reading Speed Test
-          </Link>
-        </Box>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Tormenta de Espadas</Typography>
+              
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Choque de Reyes</Typography>
+              
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Juego de Tronos</Typography>
+              
+            </Paper>
+          </Grid>
+        </Grid>
       </Box>
-      <Box className={classes.comments}>
-        <Typography variant="h6">Comments on Favorite Books</Typography>
-        <Typography variant="body2">Comment 1...</Typography>
-        <Typography variant="body2">Comment 2...</Typography>
-        <Typography variant="body2">Comment 3...</Typography>
+
+      <Box className="pendientesBooks">
+        <Typography variant="h6">Mis libros pendientes</Typography>
+        <Grid container spacing={2} className="gridContainer">
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Origen</Typography>
+              
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Inferno</Typography>
+              
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Ángeles y Demonios</Typography>
+              
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className="bookCard">
+              <Typography variant="h6">Festín de Cuervos</Typography>
+            </Paper>
+          </Grid>
+        </Grid>
       </Box>
-    </Container>
-  );
+
+    </Box>
+
+    
+  </Container>
+);
 };
 
 export default Profile;
+
