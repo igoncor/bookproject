@@ -113,11 +113,8 @@ export default function Favorites() {
                  await deleteFavorite(favorite.id)
                   fetchFavorites()
                 }
-                
-                  
-                }
-                
-                
+                              
+                }                
                   >Borrar de Favoritos</button>
               </Card>
             </Grid>

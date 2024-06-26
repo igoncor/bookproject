@@ -7,7 +7,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
-import { getMyPendings } from '../../services/pendingService';
+import { getMyPendings, deletePending  } from '../../services/pendingService';
+
 
 
 
@@ -112,6 +113,15 @@ export default function Pending() {
                   </Typography>
                   
                 </CardContent>
+                <button  onClick={ async () => 
+                
+                {
+                 await deletePending(pending.id)
+                  fetchPending()
+                }
+                              
+                }                
+                  >Borrar de Pendientes</button>
                
               </Card>
             </Grid>

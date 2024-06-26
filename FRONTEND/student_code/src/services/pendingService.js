@@ -14,6 +14,21 @@ const getMyPendings = async () => {
     }
 }
 
+const deletePending = async (id) => {
+    try {
+        const token = localStorage.getItem('token');
+        const { data } = await api.delete(`pendings/${id}`, {
+            headers: {
+                Authorization: token
+            }
+        })
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export {
-    getMyPendings
+    getMyPendings,
+    deletePending
 }
