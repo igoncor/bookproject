@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -9,13 +7,16 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
-import { getMyFavorites } from '../../services/favoriteService';
+import { getMyPendings } from '../../services/pendingService';
+
 
 
 const useStyles = styled((theme) => ({
+  
   icon: {
     marginRight: theme.spacing(2),
   },
+  
   heroContent: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
@@ -47,23 +48,23 @@ const useStyles = styled((theme) => ({
 }));
 
 
-export default function Favorites() {
+export default function Pending() {
   const classes = useStyles();
-  const [favorites, setFavorites] = useState([]);
+  const [pendings, setPending] = useState([]);
 
 
-  async function fetchFavorites() {
+  async function fetchPending() {
     try {
-      const favoriteIds = await getMyFavorites();
+      const pendingIds = await getMyPendings();
      
-      setFavorites(favoriteIds);
+      setPending(pendingIds);
     } catch (error) {
-      console.error("Error fetching favorite books:", error);
+      console.error("Error fetching pending books:", error);
     }
   }
 
   useEffect(() => {
-    fetchFavorites();
+    fetchPending();
   }, []);
 
 
@@ -73,10 +74,10 @@ export default function Favorites() {
     <main>
       <div className={classes.heroContent}>
         <Container maxWidth="sm">
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+          <Typography component="h1" variant="h2" align="center" color="blue" gutterBottom>
           Mis Libros Pendientes
           </Typography>
-          <Typography variant="body1" align="center" color="textSecondary" paragraph>
+          <Typography variant="body1" align="center" color="blue" paragraph>
           Bienvenido a tu perfil. Aquí puedes encontrar tus libros pendientes que quieres leer.
           Estos son los libros que más te interesan y que has decidido guardar en tu lista de pendientes.
           Disfruta explorando tus próximas lecturas, revisa sus detalles y, si lo deseas, accede a más información sobre cada uno de ellos.
@@ -87,7 +88,7 @@ export default function Favorites() {
       </div>
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
-          {favorites.map((favorite, index) => (
+          {pendings.map((pending, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
               <Card sx={{ border: '5px solid yellow', padding: '4px',}}
               
@@ -97,17 +98,17 @@ export default function Favorites() {
                 <CardMedia
                   className={classes.cardMedia}
                   component="img"
-                  image={favorite.book.image}// || "https://www.bing.com/images/search?view=detailV2&ccid=R93Or3NL&id=C1307C60EA113090201489178D16CFAEF832744E&thid=OIP.R93Or3NLjhihyni2_xRbFwHaE8&mediaurl=https%3a%2f%2fwww.wallpaperflare.com%2fstatic%2f512%2f909%2f111%2fbook-old-vintage-chipped-wallpaper.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.47ddceaf734b8e18a1ca78b6ff145b17%3frik%3dTnQy%252bK7PFo0XiQ%26pid%3dImgRaw%26r%3d0&exph=4000&expw=6000&q=book&simid=608043481585686858&FORM=IRPRST&ck=304537E6DA2EE8DE08E0613C9847C24B&selectedIndex=1&itb=0"}
-                  title={favorite.book.title}
+                  image={pending.book.imageURL}// || "https://www.bing.com/images/search?view=detailV2&ccid=R93Or3NL&id=C1307C60EA113090201489178D16CFAEF832744E&thid=OIP.R93Or3NLjhihyni2_xRbFwHaE8&mediaurl=https%3a%2f%2fwww.wallpaperflare.com%2fstatic%2f512%2f909%2f111%2fbook-old-vintage-chipped-wallpaper.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.47ddceaf734b8e18a1ca78b6ff145b17%3frik%3dTnQy%252bK7PFo0XiQ%26pid%3dImgRaw%26r%3d0&exph=4000&expw=6000&q=book&simid=608043481585686858&FORM=IRPRST&ck=304537E6DA2EE8DE08E0613C9847C24B&selectedIndex=1&itb=0"}
+                  title={pending.book.title}
                   
                   
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2" >
-                    {favorite.book.title}
+                    {pending.book.title}
                   </Typography>
                   <Typography>
-                    {favorite.book.summary}
+                    {pending.book.resumen}
                   </Typography>
                   
                 </CardContent>
@@ -121,3 +122,5 @@ export default function Favorites() {
   </React.Fragment>
 );
 }
+
+

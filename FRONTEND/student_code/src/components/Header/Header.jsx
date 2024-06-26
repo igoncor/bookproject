@@ -20,8 +20,8 @@ function Header() {
             News
           </Typography>
           {/* <Button color="inherit">Login</Button> */}
-          <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Button color="inherit">Login</Button>
+          <Link to="/sign-in" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Button color="inherit">Sign In</Button>
           </Link>
         </Toolbar>
       </AppBar>

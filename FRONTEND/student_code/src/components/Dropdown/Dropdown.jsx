@@ -49,7 +49,7 @@ export default function Dropdown() {
         <MenuItem onClick={handleClose} component={Link} to="/home">Home</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to="/profile">Perfil</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to="/titles">Libros</MenuItem>
-        <MenuItem onClick={handleClose} component={Link} to="/pending">Pendientes</MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/pendings">Pendientes</MenuItem>
         <MenuItem onClick={handleClose} component={Link} to="/favorites">Favoritos</MenuItem>
         {/* <MenuItem onClick={handleClose}>Home</MenuItem>
         <MenuItem onClick={handleClose}>Perfil</MenuItem>
