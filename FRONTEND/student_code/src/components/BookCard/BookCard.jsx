@@ -7,8 +7,10 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
+// import PendingButton from '../../components/Button/PendingButton/PendingButton';
 import { createFavorite } from '../../services/createFavoriteService';
-import { createPending } from '../../services/createPendingService'
+import { createPending } from '../../services/createPendingService';
+
 
 const labels = {};
 
@@ -26,10 +28,10 @@ function BookCard( { book } ) {
     }
   };
  
-  const addToPending = async (problema) => {
+  const addToPending = async (pending) => {
     try {
-      console.log(problema)
-      const response = await createPending(problema);
+      console.log(pending)
+      const response = await createPending(pending);
       if (response) {
         console.log('Book added to favorites:', response);
       }
@@ -43,9 +45,9 @@ function BookCard( { book } ) {
       <img src={book.imageURL} alt={book.title} className="book-img" style={{ height: '300px', width: '150px' }} />
       <h3>{book.title}</h3> 
       {/* <p>{book.resumen}</p> */}      
-      <p> {book.author.name} {book.author.surname}</p>
-      {/* <p>Category ID: {book.categoriesBookId}</p> */}      
+      <p> {book.author.name} {book.author.surname}</p>            
       <button onClick={() => addToList(book.id)}>Favoritos</button>
+      {/* <PendingButton /> */}
       <button onClick={() => addToPending (book.id)}>Pendientes</button>
       <Box
       sx={{

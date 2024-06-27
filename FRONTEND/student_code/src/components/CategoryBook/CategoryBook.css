@@ -1,39 +1,45 @@
-.body {
-    background-color: hsl(0, 0%, 33%);
-}
-.carousel-container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
-}
-
-.carousel-slide {
+.category-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
- 
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.carousel-image {
+.category-form-control {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+
+.category-select-label {
+    font-size: 1.2rem;
+    /* Increased font size */
+    font-weight: bold;
+    /* Make the label bold */
+}
+
+.category-select {
+    width: 100%;
+    background-color: white;
     border-radius: 8px;
 }
 
+.category-select .MuiOutlinedInput-root {
+    fieldset {
+        border-color: #dddddd;
+    }
 
-.slick-dots li button:before {
-    color: #000;
-   
-}
+    &:hover fieldset {
+        border-color: #cccccc;
+    }
 
-.slick-prev:before,
-.slick-next:before {
-    color: #000;
-  
+    &.Mui-focused fieldset {
+        border-color: #bbbbbb;
+    }
 }
