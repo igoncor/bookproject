@@ -42,7 +42,7 @@ const getAllFavorites = async (req, res) => {
 async function createFavorite(req, res) {
 	try {
 		const favorite = await Favorite.create(
-			req.body
+			{ bookId : req.body.bookId, userId : res.locals.user.id } 
 		);
 		return res.status(201).json({ message: 'Favorite created', favorite: favorite });
 	} catch (error) {
