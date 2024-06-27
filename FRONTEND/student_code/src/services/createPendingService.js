@@ -4,7 +4,7 @@ const createPending = async (bookId) => {
     try {
         console.log(bookId)
         const token = localStorage.getItem('token');
-        const { data } = await api.post('favorites', { bookId } , {
+        const { data } = await api.post('pendings', { bookId } , {
             headers: {
                 Authorization: token
             }

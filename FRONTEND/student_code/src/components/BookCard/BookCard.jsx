@@ -33,10 +33,10 @@ function BookCard( { book } ) {
       console.log(pending)
       const response = await createPending(pending);
       if (response) {
-        console.log('Book added to favorites:', response);
+        console.log('Book added to Pending:', response);
       }
     } catch (error) {
-      console.error('Error adding book to favorites:', error);
+      console.error('Error adding book to Pending:', error);
     }
   };
 
