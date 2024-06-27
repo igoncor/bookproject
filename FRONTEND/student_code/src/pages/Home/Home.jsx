@@ -18,8 +18,8 @@ const BookList = () => {
   useEffect(() => {
     const fetchBooks = async () => {
       try {
-        const allBooks = await getAllBooks(); //Cogemos todos los libros
-        // Filtrar los libros por las IDs específicas
+        const allBooks = await getAllBooks(); 
+        
         const filteredBooks = allBooks.filter(book => [12, 13, 10, 11, 17].includes(book.id));
         setBooks(filteredBooks);
       } catch (error) {
@@ -37,9 +37,8 @@ const BookList = () => {
 
   return (    
   <div>
-    {/* <CarouselBook /> */}
-      <Carousel />  
-      {/* <p>You are in Home</p> */}
+          <Carousel />  
+      
     <div className="read-this">
       <h2>Qué leer:</h2>
       <div className="book-grid">
