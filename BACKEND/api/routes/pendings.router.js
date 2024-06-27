@@ -3,7 +3,9 @@ const {checkAuth} = require("../middlewares/middlewares");
 
 const {
    getMyPendings,
-   deletePending
+   deletePending,
+   createPending,
+   updatePending
 } = require('../controllers/pending.controller')
 
 router.get('/me',
@@ -13,5 +15,14 @@ router.get('/me',
   router.delete('/:id',
     checkAuth,
     deletePending)
+
+router.post('/',
+  checkAuth, 
+  createPending),
+  
+  router.put('/:id',
+  checkAuth,
+  updatePending)
+
 
 module.exports = router

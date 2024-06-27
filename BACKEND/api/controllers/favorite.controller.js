@@ -44,7 +44,7 @@ async function createFavorite(req, res) {
 		const favorite = await Favorite.create(
 			{ bookId : req.body.bookId, userId : res.locals.user.id } 
 		);
-		return res.status(201).json({ message: 'Favorite created', favorite: favorite });
+		return res.status(201).json({ message: 'Favorite has been created', favorite: favorite });
 	} catch (error) {
 		res.status(500).send(error.message);
 	}
