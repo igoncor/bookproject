@@ -34,13 +34,8 @@ function BookCard( { book } ) {
       {/* <p>{book.resumen}</p> */}      
       <p> {book.author.name} {book.author.surname}</p>
       {/* <p>Category ID: {book.categoriesBookId}</p> */}      
-<<<<<<< HEAD
       <button onClick={() => addToList(book.id)}>Add to List</button>
       {/* <button onClick={() => removeToList(book)}>Remove from List</button> */}
-=======
-      <button onClick={() => addToList(book)}>Añadir a Favoritos</button>
-      <button onClick={() => removeToList(book)}>Añadir a Pendientes</button>
->>>>>>> 3a8e9995035d45f722fb2f52bf800c1cd2a8b292
       <Box
       sx={{
         width: 200,

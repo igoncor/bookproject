@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-// import PropTypes from 'prop-types';
-// import TextField from '@mui/material/TextField';
-// import Box from '@mui/material/Box';
-
-// function SearchBar({ searchBook }) {
-//   return (
-//     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2, mb: 2 }}>
-//       <TextField
-//         label="Search Books"
-//         variant="outlined"
-//         onChange={(e) => searchBook(e.target.value)}
-//         sx={{ width: '80%', maxWidth: '600px' }}
-//       />
-//     </Box>
-//   );
-// }
-
-// SearchBar.propTypes = {
-//   searchBook: PropTypes.func.isRequired,
-// };
-
-// export default SearchBar;
-
-
-
-
-
 import React from 'react';
->>>>>>> home
 import PropTypes from 'prop-types';
 import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
@@ -54,7 +23,6 @@ function SearchBar({ searchBook }) {
         variant="outlined"
         onChange={(e) => searchBook(e.target.value)}
         sx={{
-<<<<<<< HEAD
           width: '80%',
           maxWidth: '300px',
           marginTop: '10px',
@@ -70,21 +38,6 @@ function SearchBar({ searchBook }) {
             },
             '&.Mui-focused fieldset': {
               borderColor: '#888888',
-=======
-          width: '90%',
-          maxWidth: '400px',
-          backgroundColor: 'white',
-          borderRadius: 1,
-          '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-              borderColor: '#dddddd',
-            },
-            '&:hover fieldset': {
-              borderColor: '#cccccc',
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: '#bbbbbb',
->>>>>>> home
             },
           },
         }}
