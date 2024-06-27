@@ -6,13 +6,13 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <a href="#" className="icon">
+        <a href="#" className="">
         </a>
-        <a href="#" className="icon">
+        <a href="#" className="">
         </a>
-        <a href="#" className="icon">
+        <a href="#" className="">
         </a>
-        <a href="#" className="icon">
+        <a href="#" className="">
         </a>
       </div>
     </footer>

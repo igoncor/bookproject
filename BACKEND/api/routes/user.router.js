@@ -9,12 +9,12 @@ const {
   deleteOneUser
 } = require('../controllers/user.controller')
 
+router.get('/:id',
+  checkAuth,
+  getOneUser)
   router.get('/',
     checkAuth,
     getAllUsers)
-  router.get('/:id',
-    checkAuth,
-    getOneUser)
   router.post('/',
     checkAuth,
     createUser)

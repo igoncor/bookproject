@@ -1,0 +1,27 @@
+  
+  .container {
+    padding: 40px;
+    background-color: #121212;
+    color: white;
+    
+  }
+  
+  .card {
+    background-color: #555; /* Fondo gris oscuro para las cartas */
+    color: white; /* Texto blanco */
+    border: px solid yellow; /* Borde amarillo */
+    padding: 4px;
+  }
+  
+  .cardContent {
+    flex-grow: 1;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1px;
+    background-color: #f39f9f; /* Fondo gris oscuro para las cartas */
+    color: white; /* Texto blanco */
+    padding: 5px
+  }

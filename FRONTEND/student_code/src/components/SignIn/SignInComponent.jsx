@@ -44,6 +44,7 @@ export default function SignInFormData() {
     try {
       const {result} = await postAuthSignIn(formData);
       localStorage.setItem('token', result.token)
+      localStorage.setItem('userId', result.userId)
       navigate('/profile');
     } catch (error) {
       console.error(error)

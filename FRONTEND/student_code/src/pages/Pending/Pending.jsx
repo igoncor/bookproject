@@ -1,9 +1,13 @@
 import PendingUserData from "../../components/Pending/Pending"
-
+import './Pending.css';
 
 function PendingData() {
   return (
-    <PendingUserData></PendingUserData>
+    <div className="container">
+        
+        <PendingUserData/>
+
+    </div>
   )
 }
 

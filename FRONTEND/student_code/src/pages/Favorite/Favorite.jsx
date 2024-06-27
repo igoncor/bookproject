@@ -1,10 +1,14 @@
-import FavoriteUserData from "../../components/Favorite/Favorite"
-
+import FavoriteUserData from "../../components/Favorite/Favorite";
+import './Favorite.css';
 
 function FavoriteData() {
   return (
-    <FavoriteUserData></FavoriteUserData>
-  )
+    <div className="container">
+      
+      <FavoriteUserData />
+    
+    </div>
+  );
 }
 
-export default FavoriteData
+export default FavoriteData;
