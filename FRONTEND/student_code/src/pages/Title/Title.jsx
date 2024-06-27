@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import CategoryBook from '../../components/CategoryBook/CategoryBook';
 import BookList from '../../components/BookList/BookList';
+import './Titles.css'
 
 function Title() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,7 +17,7 @@ function Title() {
   };
 
   return (    
-    <div>     
+    <div className= "title-list">     
       <SearchBar searchBook={handleSearch} />
       <CategoryBook selectedCategory={selectedCategory} onChange={handleCategoryChange} />
       <BookList search={searchTerm} selectedCategory={selectedCategory} />
