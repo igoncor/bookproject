@@ -3,6 +3,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import CategoryBook from '../../components/CategoryBook/CategoryBook';
 import BookList from '../../components/BookList/BookList';
 import './Titles.css'
+import Box from '@mui/material/Box';
 
 function Title() {
   const [searchTerm, setSearchTerm] = useState('');

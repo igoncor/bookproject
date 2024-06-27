@@ -23,21 +23,19 @@ function SearchBar({ searchBook }) {
         variant="outlined"
         onChange={(e) => searchBook(e.target.value)}
         sx={{
-          width: '80%',
-          maxWidth: '300px',
-          marginTop: '10px',
+          width: '90%',
+          maxWidth: '400px',
           backgroundColor: 'white',
           borderRadius: 1,
-          boxShadow: 1,
           '& .MuiOutlinedInput-root': {
             '& fieldset': {
-              borderColor: '#cccccc',
+              borderColor: '#dddddd',
             },
             '&:hover fieldset': {
-              borderColor: '#aaaaaa',
+              borderColor: '#cccccc',
             },
             '&.Mui-focused fieldset': {
-              borderColor: '#888888',
+              borderColor: '#bbbbbb',
             },
           },
         }}

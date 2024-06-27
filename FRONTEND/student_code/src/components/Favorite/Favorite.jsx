@@ -1,52 +1,22 @@
+
+
 import React, { useState, useEffect } from 'react';
 import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+
 import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { styled } from '@mui/material/styles';
+
 import { getMyFavorites, deleteFavorite } from '../../services/favoriteService';
 
 
-const useStyles = styled((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-  footer:  {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
-  
-}));
+
 
 
 export default function Favorites() {
-  const classes = useStyles();
+  
   const [favorites, setFavorites] = useState([]);
 
 
@@ -69,53 +39,53 @@ export default function Favorites() {
     <React.Fragment>
     <CssBaseline />
     <main>
-      <div className={classes.heroContent}>
+      <div>
         <Container maxWidth="sm">
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+          <Typography component="h1" variant="h3" align="center" color="white" gutterBottom>
             Mis Libros Favoritos
           </Typography>
-          <Typography variant="body1" align="center" color="textSecondary" paragraph>
+          <Typography variant="body1" align="center" color="white" paragraph>
             Bienvenido a tu perfil. Aquí puedes encontrar tus libros favoritos mejor valorados.
             Estos son los libros que más te han gustado y que has decidido guardar en tu lista de favoritos.
             Disfruta explorando tus lecturas preferidas, revisa sus detalles y, si lo deseas, accede a más información sobre cada uno de ellos.
           </Typography>
         </Container>
       </div>
-      <Container className={classes.cardGrid} maxWidth="md">
+      <Container maxWidth="md">
         <Grid container spacing={4}>
           {favorites.map((favorite, index) => (
             <Grid item key={index} xs={12} sm={6} md={4}>
               <Card sx={{ border: '5px solid yellow', padding: '4px',}}
               
-              className={classes.card}>
-                
-                
+              >
+                     
                 <CardMedia
-                  className={classes.cardMedia}
+                  
                   component="img"
                   image={favorite.book.imageURL}
-                  title={favorite.book.title}
-                  
+                  title={favorite.book.title}      
                   
                 />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2" >
+          
+                  <Typography gutterBottom variant="h4" component="h2" align="center" >
                     {favorite.book.title}
                   </Typography>
-                  <Typography>
+                  <Typography align="center">
                     {favorite.book.resumen}
                   </Typography>
                   
-                </CardContent>
-                <button  onClick={ async () => 
                 
-                {
-                 await deleteFavorite(favorite.id)
-                  fetchFavorites()
-                }
-                              
-                }                
-                  >Borrar de Favoritos</button>
+                  <div className="button-container">
+                    <button
+                      className="delete-button"
+                      onClick={async () => {
+                        await deleteFavorite(favorite.id);
+                        fetchFavorites();
+                      }}
+                    >
+                      Borrar de Favoritos
+                    </button>
+                  </div>
               </Card>
             </Grid>
           ))}
