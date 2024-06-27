@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     height: 400px;
-    /* Adjust the height as needed */
+ 
 }
 
 .carousel-image {
@@ -26,14 +26,14 @@
     border-radius: 8px;
 }
 
-/* Slick carousel custom styles */
+
 .slick-dots li button:before {
     color: #000;
-    /* Dot color */
+   
 }
 
 .slick-prev:before,
 .slick-next:before {
     color: #000;
-    /* Arrow color */
+  
 }
