@@ -1,8 +1,7 @@
 .carousel-background {
-    background-color: #2c2c2c;
-    /* Dark gray background */
+    background-color: #2c2c2c;   
     padding: 40px 0;
-    /* Padding to provide space around the carousel */
+   
 }
 
 .carousel-container {
@@ -20,7 +19,7 @@
     justify-content: center;
     align-items: center;
     height: 500px;
-    /* Adjust the height as needed */
+   
 }
 
 .carousel-image {
@@ -30,14 +29,15 @@
     border-radius: 8px;
 }
 
-/* Slick carousel custom styles */
+
 .slick-dots li button:before {
-    color: #fff;
-    /* Dot color */
+    color: #2c2c2c;    
 }
 
 .slick-prev:before,
 .slick-next:before {
-    color: #fff;
-    /* Arrow color */
+    color: #2c2c2c;
+    
 }
+
+
