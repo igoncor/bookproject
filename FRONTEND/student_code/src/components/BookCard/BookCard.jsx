@@ -153,9 +153,14 @@ function BookCard({ book }) {
 BookCard.propTypes = {
   book: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    imageURL: PropTypes.string.isRequired,
     resumen: PropTypes.string.isRequired,
-    author_id: PropTypes.number.isRequired,
-    category_id: PropTypes.number.isRequired,
+    author: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      surname: PropTypes.string.isRequired,
+    }).isRequired,
+    likes: PropTypes.number.isRequired,
+    id: PropTypes.number.isRequired,
   }).isRequired,
 };
 
